@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+@media only screen and (max-width : 1680px) {        
+  
+    /* --- resize ---*/
+    .audience {background-size:1820px auto;}
+    .candidate-scalewpr {transform:scale(0.86);}
+
+    .controller {transform:scale(0.9);}   
+    .flag {transform:scale(0.9);}
+    
+}
+
+@media only screen and (max-width : 1440px) {    
+    
+    /* --- resize ---*/
+    .audience {background-size:1700px auto;}
+    .candidate-scalewpr {transform:scale(0.8);}
+
+    .controller {transform:scale(0.75);}  
+    .flag {transform:scale(0.8);}   
+    
+}
+
+
+@media only screen and (max-width : 1280px) {    
+    
+    /* --- resize ---*/
+    .audience {background-size:1600px auto;}
+    .candidate-scalewpr {transform:scale(0.72);}
+    .controller {transform:scale(0.7);}  
+    .flag {transform:scale(0.7);}
+    
+    /* --- position ---*/
+    .stage {padding-bottom:260px;}
+    .curtains {bottom:40%;}
+    
+}
+
+@media only screen and (max-width : 1170px) {    
+    
+    /* --- resize ---*/
+    .audience {background-size:1500px auto;}
+    .candidate-scalewpr {transform:scale(0.62);}
+    .controller {transform:scale(0.6);}  
+    
+}
+
+@media only screen and (max-width : 1024px) {    
+    
+    /* --- resize ---*/
+    .audience {background-size:1400px auto;}
+    
+    /* --- others ---*/
+    .counter .count {line-height:31px;}
+    
+}
+
+@media only screen and (max-width : 1024px) and (min-height : 1024px) {    
+    
+    /* --- resize ---*/
+    .curtains {transform:none;}
+        
+    /* --- others ---*/
+    .curtains {bottom:auto; top:0;}
+    .flag {top:20px;}
+}
+
+@media only screen and (max-width : 1000px) {    
+    
+    /* --- resize ---*/
+    .candidate-scalewpr {transform:scale(0.7);}
+    
+     /* --- position ---*/
+     .stage {padding-bottom:230px;}
+    .candidate-wrapper {flex-wrap:wrap; align-content:center;}
+    
+    .candidate {flex-basis:33%;}
+    .candidate.zhan {top:48px; left:40px;}
+    .candidate.hung {top:48px;}
+    .candidate.hao {top:48px; left:-40px;}    
+    .candidate.han {top:-150px; left:-5px;}
+    .candidate.wu {top:-150px;}
+    .candidate.pan {top:-150px; left:5px;}    
+    
+    .curtains {bottom:33%;}
+    .flag {top:15px;}
+    .flag.left {left:-15px;}
+    .flag.right {right:-15px;}
+    
+}
+
+@media only screen and (max-width : 700px) {    
+    
+    /* --- resize ---*/
+    .container {background-size:1700px auto;}
+    .audience {background-size:1500px auto;}
+    .curtains {transform:scale(0.85);}
+    
+    .candidate-scalewpr { transform:scale(0.82);}
+    
+     /* --- position ---*/
+    .stage {overflow-x:scroll; overflow-y:hidden;
+    padding-bottom:220px; 
+    }
+    .candidate-wrapper {width:600vw; height:100%; position:relative;
+    flex-wrap:nowrap; align-content:flex-end;
+    }
+    .candidate {width:100vw;}        
+    .stage .candidate {left:0; top:0;}
+    
+    .flag {top:10px;}
+    .curtains {bottom:18%;}
+    
+    /* --- others ---*/
+    .controller.left {display:none;}   
+    
+}
+
+@media only screen and (max-width : 420px) {    
+    
+    /* --- resize ---*/
+    .container {background-size:1500px auto;}
+    
+    .candidate-scalewpr {transform:scale(0.74);}
+    .flag {transform:scale(0.6);}  
+    
+    /* --- position ---*/
+    .curtains {bottom:16%;}
+    .stage {padding-bottom:200px;}
+
+}
+
+@media only screen and (max-width : 360px) {    
+    
+    /* --- resize ---*/
+    .container {background-size:1400px auto;}
+    .audience {background-size:1300px auto;}
+    .candidate-scalewpr {transform:scale(0.7);}
+    .curtains {transform:scale(0.75);}
+    
+     /* --- position ---*/
+     .curtains {bottom:0;}
+     .stage {padding-bottom:185px;}
+
+}
+
+@media only screen and (max-width : 320px) {    
+    
+    /* --- resize ---*/
+    .container {background-size:1200px auto;}
+    .audience {background-size:1200px auto;}
+    
+    .candidate-scalewpr {transform:scale(0.62);}
+    .curtains {transform:scale(0.72);}
+    .flag {transform:scale(0.5);}
+    
+     /* --- position ---*/
+     .curtains {bottom:-20px;}
+     .stage {padding-bottom:165px;}
+
+}
+
+@media only screen and (max-width : 320px) and (max-height : 500px) {    
+    
+    /* --- resize ---*/
+    .container {background-size:1000px auto;}
+    .audience {background-size:1100px auto;}
+    
+    .candidate-scalewpr {transform:scale(0.58);}
+    .curtains {transform:scale(0.6);}
+    .flag {transform:scale(0.45);}
+    
+     /* --- position ---*/
+     .curtains {bottom:-160px;}
+     .stage {padding-bottom:140px;}
+
+}
