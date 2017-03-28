@@ -27,36 +27,34 @@ background-color:#071624;
 background-image:url("../images/stage.png"); background-position:center bottom; background-size:1920px auto;
 }
 
-.controller {width:360px; height:240px; position:fixed; bottom:0; z-index:600; 
-/*box-shadow:0 0 2px blueviolet;*/
-}
-.controller.left {left:0;}
-.controller.right {right:0; display:none;}
-
-.controller:before {content:""; display:block; width:800px; height:800px; position:absolute; top:0;
+.question {width:360px; height:240px; position:fixed; left:0; bottom:0; z-index:600;}
+.question-scalewpr {width:100%; height:100%; position:absolute; left:0; top:0;}
+.panelbg {width:800px; height:800px; position:absolute; top:0; right:-33px;
 background-color:#1c1d29; border-radius:100%;
 }
-.controller.left:before {right:-33px;}
-.controller.right:before {left:-33px;}
-
-.controller .btn {display:block; width:180px; height:180px; position:absolute; cursor:pointer;
-border-radius:100%;
-background-size:100% auto;  
-}
-.controller .shoe {bottom:14px; left:-24px;
-background-image:url("../images/btn-shoe.png");
-background-color:#2b2c3e;
-}
-.controller .flower {bottom:120px; right:24px;
-background-image:url("../images/btn-flower.png");
-background-color:#2b2c3e; 
-}
-
 .bullhorn {width:259px; height:305px; position:absolute; left:-50px; bottom:-50px;
 background-image:url("../images/bullhorn.png"); background-size:100% auto;
 }
 
-.question {}
+.question-content {width:560px; padding:25px 40px 20px 120px;
+position:absolute; left:85px; top:-45px;
+background-color:rgba(24,33,70,0.96); border-radius:100px 30px 30px 100px;
+box-sizing:border-box;
+}
+
+.question-control {display:flex; justify-content:flex-end; align-items:center; position:relative; z-index:500; right:-14px;}
+.question-index {position:relative; text-indent:10px;
+color:#c6c8cc; font-size:45px; text-align:center; line-height:100%; 
+font-family:"Press Start 2P";
+}
+.question-btn {display:block; width:54px; height:44px; cursor:pointer;
+background-image:url("../images/question-arrow.svg"); background-size:auto 37px;
+}
+.question-btn.prev {background-position:left top;}
+.question-btn.next {background-position:right top;}
+.question-btn.disabled {opacity:0; cursor:default;}
+
+.question-content p {color:#fff; font-size:18px; line-height:26px; min-height:78px; margin-bottom:30px; }
 
 
 /*--- stag scene ---*/
@@ -64,8 +62,6 @@ background-image:url("../images/bullhorn.png"); background-size:100% auto;
 
 .stage {width:100%; height:100vh; position:absolute; left:0; top:0; padding-bottom:280px; 
 box-sizing:border-box;
-/* padding-bottom:7%; */
-/*box-shadow:0 0 2px goldenrod;*/
 }
 
 .candidate-wrapper {height:100%; position:relative; 
@@ -77,7 +73,6 @@ background-image:url("../images/audience.png"); background-repeat:repeat-x;
 pointer-events:none;
 transition:500ms; 
 transition-property:filter;
-/*box-shadow:0 0 2px green;*/
 }
 .dim .audience {filter:brightness(50%) opacity(98%) saturate(80%);}
 
@@ -85,7 +80,6 @@ transition-property:filter;
 background-size:181px auto;
 transition:500ms; 
 transition-property:filter;
-/*box-shadow:0 0 2px goldenrod;*/
 }
 .curtains.left {left:0; background-image:url("../images/curtains-left.png"); background-position:left bottom;}
 .curtains.right {right:0; background-image:url("../images/curtains-right.png"); background-position:right bottom;}
@@ -96,7 +90,6 @@ transition-property:filter;
 background-size:219px auto;
 transition:500ms; 
 transition-property:filter;
-/*box-shadow:0 0 2px aqua;*/
 }
 .flag.left {left:-5px; background-image:url("../images/flag-left.png"); background-position:left top;}
 .flag.right {right:-5px; background-image:url("../images/flag-right.png"); background-position:right top;}
@@ -115,7 +108,6 @@ opacity:0; transition:opacity 500ms;
 transition:500ms; 
 transition-property:filter;
 pointer-events:none; 
-/*box-shadow:0 0 2px appworkspace;*/
 }
 .dim .candidate {filter:brightness(25%) opacity(98%) saturate(80%); z-index:5;}
 .dim .candidate.active {filter:none; z-index:10; }
@@ -196,8 +188,7 @@ transition:600ms; transition-property:opacity,top;
 
 
 /* --- transform origin ---*/
-.controller.left {transform-origin:left bottom;}
-.controller.right {transform-origin:right bottom;}
+.question-scalewpr {transform-origin:left bottom;}
 .candidate-scalewpr {transform-origin:center bottom;}
 .curtains.left {transform-origin:left top;}
 .curtains.right {transform-origin:right top;}

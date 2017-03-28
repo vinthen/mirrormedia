@@ -5,9 +5,11 @@
     /* --- resize ---*/
     .audience {background-size:1820px auto;}
     .candidate-scalewpr {transform:scale(0.86);}
-
-    .controller {transform:scale(0.9);}   
+    .question-scalewpr {transform:scale(0.9);}
     .flag {transform:scale(0.9);}
+    
+    /* --- 問題內容 ---*/
+    .question-content {top:-26px;}
     
 }
 
@@ -16,9 +18,11 @@
     /* --- resize ---*/
     .audience {background-size:1700px auto;}
     .candidate-scalewpr {transform:scale(0.8);}
-
-    .controller {transform:scale(0.75);}  
+    .question-scalewpr {transform:scale(0.75);}
     .flag {transform:scale(0.8);}   
+    
+    /* --- 問題內容 ---*/
+    .question-content {left:40px; top:0px;}
     
 }
 
@@ -28,12 +32,15 @@
     /* --- resize ---*/
     .audience {background-size:1600px auto;}
     .candidate-scalewpr {transform:scale(0.72);}
-    .controller {transform:scale(0.7);}  
+    .question-scalewpr {transform:scale(0.7);}
     .flag {transform:scale(0.7);}
     
     /* --- position ---*/
     .stage {padding-bottom:260px;}
     .curtains {bottom:40%;}
+    
+    /* --- 問題內容 ---*/
+    .question-content {left:40px; top:0px;}
     
 }
 
@@ -42,7 +49,11 @@
     /* --- resize ---*/
     .audience {background-size:1500px auto;}
     .candidate-scalewpr {transform:scale(0.62);}
-    .controller {transform:scale(0.6);}  
+    .question-scalewpr {transform:scale(0.6);}
+    
+    /* --- 問題內容 ---*/
+    .question-content {left:30px; top:30px; padding-left:100px;}
+    .question-index {font-size:40px;}
     
 }
 
@@ -111,10 +122,15 @@
     
     .flag {top:10px;}
     .curtains {bottom:18%;}
+
     
-    /* --- others ---*/
-    .controller.left {display:none;}   
+}
+
+@media only screen and (max-width : 590px) {  
     
+    /* --- 問題內容 ---*/
+    .question-content {width:95vw; left:10px; top:auto; bottom:10px; padding-left:120px;}
+
 }
 
 @media only screen and (max-width : 420px) {    
@@ -128,6 +144,16 @@
     /* --- position ---*/
     .curtains {bottom:16%;}
     .stage {padding-bottom:200px;}
+    
+    /* --- 問題內容 ---*/
+    .question-content {border-radius:30px;
+        padding-bottom:20px; padding-left:40px; padding-bottom:15px; 
+    }
+    .bullhorn {bottom:-125px; left:-150px;}
+    .question-content p {font-size:16px; line-height:24px; min-height:72px; 
+        margin-bottom:10px;   
+    }
+    .question-index {font-size:36px;}
 
 }
 
