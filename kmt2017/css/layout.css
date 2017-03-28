@@ -56,6 +56,8 @@ background-color:#2b2c3e;
 background-image:url("../images/bullhorn.png"); background-size:100% auto;
 }
 
+.question {}
+
 
 /*--- stag scene ---*/
 .bg {background-position:center bottom; background-size:1920px auto;}
@@ -73,8 +75,11 @@ display:flex; align-items:flex-end; justify-content:space-around; flex-wrap:nowr
 .audience {position:absolute; width:100%; height:303px; left:0; bottom:0; z-index:500; 
 background-image:url("../images/audience.png"); background-repeat:repeat-x;
 pointer-events:none;
+transition:500ms; 
+transition-property:filter;
 /*box-shadow:0 0 2px green;*/
 }
+.dim .audience {filter:brightness(50%) opacity(98%) saturate(80%);}
 
 .curtains {width:181px; height:790px; position:absolute; bottom:33%;
 background-size:181px auto;
@@ -106,14 +111,14 @@ opacity:0; transition:opacity 500ms;
 .dim #stageMask {opacity:1;}
 
 /*--- candidate ---*/
-.candidate {height:529px; position:relative; z-index:400; cursor:pointer;
+.candidate {height:529px; position:relative; cursor:pointer;
 transition:500ms; 
 transition-property:filter;
 pointer-events:none; 
 /*box-shadow:0 0 2px appworkspace;*/
 }
-.dim .candidate {filter:brightness(25%) opacity(98%) saturate(80%);}
-.dim .candidate.active {filter:none;}
+.dim .candidate {filter:brightness(25%) opacity(98%) saturate(80%); z-index:5;}
+.dim .candidate.active {filter:none; z-index:10; }
 
 .candidate-scalewpr {position:relative; height:100%;
 pointer-events:auto; 
@@ -139,7 +144,7 @@ transition:600ms; top:50px; opacity:0;
 transition-property:top,opacity; 
 pointer-events:none; 
 }
-.candidate.active .emblem {top:-100px; opacity:1;}
+.candidate.active .emblem {top:-90px; opacity:1;}
 
 /*--- candidate: counter ---*/
 .counter {min-width:135px; height:31px; display:inline-block; margin:0 auto; padding:0 7px; position:relative; top:314px;
@@ -159,6 +164,36 @@ font-family:"Press Start 2P";
 background-color:#0d0d06;
 }
 
+/*--- candidate: answer ---*/
+.bubble {width:330px; position:absolute; left:170px; padding:30px 35px 45px 35px; 
+background-color:#19307a; border-radius:30px; cursor:auto; pointer-events:auto;
+}
+.bubble:before {content:""; display:block; width:34px; height:48px; position:absolute; left:-34px; top:50%; margin-top:-24px; 
+background-image:url("../images/bobble-tail.png"); background-size:100% auto;
+}
+.bubble p {color:#fff; font-size:18px; line-height:26px;}
+
+.reactbtn {width:140px; height:140px; position:absolute; bottom:-125px;
+border-radius:100%; border-width:8px; border-style:solid; cursor:pointer;
+background-color:#132b68; background-size:100% auto; background-repeat:no-repeat; 
+}
+.reactbtn.add {border-color:#23aab1; left:33px;
+background-image:url("../images/btn-flower.png"); background-position:5px 0; 
+}
+.reactbtn.deduct {border-color:#d95a5b; right:33px;
+background-image:url("../images/btn-shoe.png");
+}
+.reactbtn .txt {position:absolute; top:91px;
+font-family:"Press Start 2P"; font-size:20px;    
+}
+.reactbtn.add .txt {color:#23aab1; left:15px;}
+.reactbtn.deduct .txt {color:#d95a5b; right:15px;}
+
+.bubble {opacity:0; top:50px; pointer-events:none;
+transition:600ms; transition-property:opacity,top; 
+}
+.active .bubble {opacity:1; top:30px; pointer-events:auto;}
+
 
 /* --- transform origin ---*/
 .controller.left {transform-origin:left bottom;}
@@ -173,6 +208,7 @@ background-color:#0d0d06;
 .audience {background-size:1920px auto;}
 .flag {transform:scale(0.95);}
 .candidate-scalewpr {transform:scale(0.92);}
+/*.candidate-scalewpr {transform:none !important;}*/
 
 
 /* --- size detection ---*/

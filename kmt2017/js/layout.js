@@ -2,7 +2,6 @@ $(document).ready(function(){
 
 //操作示意
 var $container = $(".container");
-//var $candidate = $(".candidate");
 var $candidateTrigger = $(".candidate-scalewpr");
 
 $candidateTrigger.click(function(){  
@@ -21,7 +20,7 @@ $candidateTrigger.click(function(){
     }
 });
 
-
+//$(".zhan .candidate-scalewpr").click();
 
 
 
