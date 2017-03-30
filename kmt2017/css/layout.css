@@ -27,8 +27,12 @@ background-color:#071624;
 background-image:url("../images/stage.png"); background-position:center bottom; background-size:1920px auto;
 }
 
-.question {width:360px; height:240px; position:fixed; left:0; bottom:0; z-index:600;}
-.question-scalewpr {width:100%; height:100%; position:absolute; left:0; top:0;}
+.question {width:360px; height:240px; position:fixed; left:0; bottom:0; z-index:600;
+pointer-events:none; 
+}
+.question-scalewpr {width:100%; height:100%; position:absolute; left:0; top:0;
+pointer-events:auto;
+}
 .panelbg {width:800px; height:800px; position:absolute; top:0; right:-33px;
 background-color:#1c1d29; border-radius:100%;
 }
@@ -37,24 +41,27 @@ background-image:url("../images/bullhorn.png"); background-size:100% auto;
 }
 
 .question-content {width:560px; padding:25px 40px 20px 120px;
-position:absolute; left:85px; top:-45px;
-background-color:rgba(24,33,70,0.96); border-radius:100px 30px 30px 100px;
+position:absolute; left:85px; bottom:25px;
+background-color:rgba(29,43,75,0.97); border-radius:100px 30px 30px 100px;
 box-sizing:border-box;
+pointer-events:auto;
 }
 
 .question-control {display:flex; justify-content:flex-end; align-items:center; position:relative; z-index:500; right:-14px;}
 .question-index {position:relative; text-indent:10px;
-color:#c6c8cc; font-size:45px; text-align:center; line-height:100%; 
+color:#fff; font-size:45px; text-align:center; line-height:100%; 
 font-family:"Press Start 2P";
 }
 .question-btn {display:block; width:54px; height:44px; cursor:pointer;
 background-image:url("../images/question-arrow.svg"); background-size:auto 37px;
 }
-.question-btn.prev {background-position:left top;}
-.question-btn.next {background-position:right top;}
+.question-btn.prev {background-position:left center;}
+.question-btn.next {background-position:right center;}
 .question-btn.disabled {opacity:0; cursor:default;}
 
-.question-content p {color:#fff; font-size:18px; line-height:26px; min-height:78px; margin-bottom:30px; }
+.question-content p {color:#fff; font-size:18px; line-height:26px; margin-bottom:20px; 
+/*min-height:78px;*/
+}
 
 
 /*--- stag scene ---*/
@@ -113,7 +120,7 @@ pointer-events:none;
 .dim .candidate.active {filter:none; z-index:10; }
 
 .candidate-scalewpr {position:relative; height:100%;
-pointer-events:auto; 
+pointer-events:auto;
 }
 
 .podium {width:190px; height:233px; position:absolute; left:50%; bottom:0; margin-left:-95px; 
@@ -138,6 +145,12 @@ pointer-events:none;
 }
 .candidate.active .emblem {top:-90px; opacity:1;}
 
+/*--- candidate: mobile small avatar ---*/
+.avatar-small {position:absolute; width:128px; height:128px; left:15px; top:-15px;
+display:none;
+}
+.avatar-small img {position:absolute; left:0; bottom:0; width:100%;}
+
 /*--- candidate: counter ---*/
 .counter {min-width:135px; height:31px; display:inline-block; margin:0 auto; padding:0 7px; position:relative; top:314px;
 background-color:#2f2f42; border:7px solid #111; border-top-width:6px;
@@ -157,34 +170,63 @@ background-color:#0d0d06;
 }
 
 /*--- candidate: answer ---*/
-.bubble {width:330px; position:absolute; left:170px; padding:30px 35px 45px 35px; 
+.bubble {width:330px; position:absolute; padding:30px 35px 45px 35px; 
 background-color:#19307a; border-radius:30px; cursor:auto; pointer-events:auto;
 }
-.bubble:before {content:""; display:block; width:34px; height:48px; position:absolute; left:-34px; top:50%; margin-top:-24px; 
-background-image:url("../images/bobble-tail.png"); background-size:100% auto;
+.bubble:before {content:""; display:none; width:34px; height:48px; position:absolute; left:-32px; top:50%; margin-top:-24px; 
+background-image:url("../images/bubble-tail.png"); background-size:auto 100%; background-position:0 0; 
 }
-.bubble p {color:#fff; font-size:18px; line-height:26px;}
+.bubble:after {content:""; display:none; width:34px; height:48px; position:absolute; right:-32px; top:50%; margin-top:-24px; 
+background-image:url("../images/bubble-tail.png"); background-size:auto 48px; background-position:-66px 0;
+}
 
-.reactbtn {width:140px; height:140px; position:absolute; bottom:-125px;
-border-radius:100%; border-width:8px; border-style:solid; cursor:pointer;
-background-color:#132b68; background-size:100% auto; background-repeat:no-repeat; 
-}
-.reactbtn.add {border-color:#23aab1; left:33px;
-background-image:url("../images/btn-flower.png"); background-position:5px 0; 
-}
-.reactbtn.deduct {border-color:#d95a5b; right:33px;
-background-image:url("../images/btn-shoe.png");
-}
-.reactbtn .txt {position:absolute; top:91px;
-font-family:"Press Start 2P"; font-size:20px;    
-}
-.reactbtn.add .txt {color:#23aab1; left:15px;}
-.reactbtn.deduct .txt {color:#d95a5b; right:15px;}
-
-.bubble {opacity:0; top:50px; pointer-events:none;
+.bubble {opacity:0; top:100px; pointer-events:none;
 transition:600ms; transition-property:opacity,top; 
 }
-.active .bubble {opacity:1; top:30px; pointer-events:auto;}
+.active .bubble {opacity:1; top:70px; pointer-events:auto;}
+
+.bubble p {color:#fff; font-size:18px; line-height:26px;}
+
+.reactbtn {width:120px; height:120px; position:absolute; bottom:-100px;
+border-radius:100%; border-width:7px; border-style:solid; cursor:pointer;
+background-color:#132b68; background-size:100% auto; background-repeat:no-repeat; 
+}
+.reactbtn.add {border-color:#23aab1; left:56px;
+background-image:url("../images/btn-flower.png"); background-position:5px -2px; 
+}
+.reactbtn.deduct {border-color:#d95a5b; right:56px;
+background-image:url("../images/btn-shoe.png"); background-position:0 -2px; 
+}
+.reactbtn .txt {position:absolute; top:80px;
+font-family:"Press Start 2P"; font-size:20px;    
+}
+.reactbtn.add .txt {color:#23aab1; left:12px;}
+.reactbtn.deduct .txt {color:#d95a5b; right:16px;}
+
+/*--- candidate: bubble position ---*/
+.c01 .bubble {left:160px;}
+.c01 .bubble:before {display:block;}
+.c01 .bubble:after {display:none;}
+
+.c02 .bubble {left:160px;}
+.c02 .bubble:before {display:block;}
+.c02 .bubble:after {display:none;}
+
+.c03 .bubble {left:160px;}
+.c03 .bubble:before {display:block;}
+.c03 .bubble:after {display:none;}
+
+.c04 .bubble {right:160px;}
+.c04 .bubble:before {display:none;}
+.c04 .bubble:after {display:block;}
+
+.c05 .bubble {right:160px;}
+.c05 .bubble:before {display:none;}
+.c05 .bubble:after {display:block;}
+
+.c06 .bubble {right:160px;}
+.c06 .bubble:before {display:none;}
+.c06 .bubble:after {display:block;}
 
 
 /* --- transform origin ---*/

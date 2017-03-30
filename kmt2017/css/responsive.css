@@ -6,10 +6,7 @@
     .audience {background-size:1820px auto;}
     .candidate-scalewpr {transform:scale(0.86);}
     .question-scalewpr {transform:scale(0.9);}
-    .flag {transform:scale(0.9);}
-    
-    /* --- 問題內容 ---*/
-    .question-content {top:-26px;}
+    .flag {transform:scale(0.9);} 
     
 }
 
@@ -22,7 +19,7 @@
     .flag {transform:scale(0.8);}   
     
     /* --- 問題內容 ---*/
-    .question-content {left:40px; top:0px;}
+    .question-content {left:40px;}
     
 }
 
@@ -39,8 +36,9 @@
     .stage {padding-bottom:260px;}
     .curtains {bottom:40%;}
     
-    /* --- 問題內容 ---*/
-    .question-content {left:40px; top:0px;}
+    /* --- 回答泡泡 ---*/
+    .bubble  {top:130px;}
+    .active .bubble {top:100px;}
     
 }
 
@@ -52,8 +50,9 @@
     .question-scalewpr {transform:scale(0.6);}
     
     /* --- 問題內容 ---*/
-    .question-content {left:30px; top:30px; padding-left:100px;}
+    .question-content {left:30px; padding-left:100px;}
     .question-index {font-size:40px;}
+    .bubble p,.question-content p {font-size:16px; line-height:22px;}
     
 }
 
@@ -87,18 +86,45 @@
     .candidate-wrapper {flex-wrap:wrap; align-content:center;}
     
     .candidate {flex-basis:33%;}
-    .candidate.zhan {top:48px; left:40px;}
-    .candidate.hung {top:48px;}
-    .candidate.hao {top:48px; left:-40px;}    
-    .candidate.han {top:-150px; left:-5px;}
-    .candidate.wu {top:-150px;}
-    .candidate.pan {top:-150px; left:5px;}    
+    .candidate.c01 {top:48px; left:40px;}
+    .candidate.c02 {top:48px;}
+    .candidate.c03 {top:48px; left:-40px;}    
+    .candidate.c04 {top:-150px; left:-5px;}
+    .candidate.c05 {top:-150px;}
+    .candidate.c06 {top:-150px; left:5px;}    
     
     .curtains {bottom:33%;}
     .flag {top:15px;}
     .flag.left {left:-15px;}
     .flag.right {right:-15px;}
     
+    /* --- 問題內容 ---*/
+    .bubble p,.question-content p {font-size:15px; line-height:21px;}
+    
+    /* --- 回答泡泡 ---*/
+    .bubble  {top:180px; width:280px; padding:20px 30px 45px 30px;}
+    .active .bubble {top:150px;}
+    
+    .reactbtn {width:100px; height:100px; bottom:-80px;}
+    .reactbtn.add {left:50px;}
+    .reactbtn.deduct {right:50px;}
+    .reactbtn .txt {top:65px; font-size:18px;}
+    .reactbtn.add .txt {left:9px;}
+    .reactbtn.deduct .txt {right:12px;}
+    
+    /* --- 回答泡泡位置 ---*/
+    .c03 .bubble {right:160px; left:auto}
+    .c03 .bubble:before {display:none;}
+    .c03 .bubble:after {display:block;}
+    
+    .c04 .bubble {left:160px; right:auto;}
+    .c04 .bubble:before {display:block;}
+    .c04 .bubble:after {display:none;}
+    
+    .c05 .bubble {left:160px; right:auto}
+    .c05 .bubble:before {display:block;}
+    .c05 .bubble:after {display:none;}    
+        
 }
 
 @media only screen and (max-width : 700px) {    
@@ -122,6 +148,37 @@
     
     .flag {top:10px;}
     .curtains {bottom:18%;}
+    
+    /* --- 問題內容 ---*/
+    .question-content p {margin-bottom:10px;}
+    
+    /* --- 回答泡泡 ---*/
+    .avatar-small {display:block;}
+    .emblem {display:none;}
+    
+    .candidate .bubble {z-index:500; position:fixed; top:60px; left:15px; width:calc(100vw - 30px);
+        padding-bottom:25px; padding-top:120px;
+        box-sizing:border-box; 
+    }
+    .candidate.active .bubble {top:30px;}
+    
+    .candidate .bubble:before {display:block; width:48px; height:34px;
+        left:40px; top:auto; margin-top:0; bottom:-33px;
+        background-position:right 0;
+    
+    }
+    .candidate .bubble:after {display:none;}
+    
+    .reactbtn {bottom:auto; top:10px;
+        width:86px; height:86px;
+        border-width:5px;
+    }
+    .reactbtn.add {right:128px; left:auto;}
+    .reactbtn.deduct {right:16px;}
+    
+    .reactbtn .txt {top:56px; font-size:16px;}
+    .reactbtn.add .txt {left:9px;}
+    .reactbtn.deduct .txt {right:12px;}
 
     
 }
@@ -129,7 +186,9 @@
 @media only screen and (max-width : 590px) {  
     
     /* --- 問題內容 ---*/
-    .question-content {width:95vw; left:10px; top:auto; bottom:10px; padding-left:120px;}
+    .question-content {width:calc(100vw - 45px); right:15px; bottom:15px;
+        padding-right:30px; padding-bottom:10px; 
+    }
 
 }
 
@@ -146,15 +205,30 @@
     .stage {padding-bottom:200px;}
     
     /* --- 問題內容 ---*/
-    .question-content {border-radius:30px;
-        padding-bottom:20px; padding-left:40px; padding-bottom:15px; 
+    .bullhorn {bottom:-105px; left:-165px;}
+    .question-content {width:calc(100vw - 20px); left:10px; bottom:10px; right:10px;
+        padding-left:30px; padding-right:25px; padding-top:20px; 
+        border-radius:30px;
     }
-    .bullhorn {bottom:-125px; left:-150px;}
-    .question-content p {font-size:16px; line-height:24px; min-height:72px; 
-        margin-bottom:10px;   
-    }
-    .question-index {font-size:36px;}
+    .question-content p {font-size:16px; line-height:22px;}
+    
+    .question-control {height:32px;}
+    .question-index {font-size:32px;}
+    .question-btn {height:32px; background-size:auto 32px;}
+    
+    /* --- 回答泡泡 ---*/
+    .candidate .bubble {left:10px; width:calc(100vw - 20px);}
 
+}
+
+@media only screen and (max-width : 400px) {
+    
+    /* --- 回答泡泡 ---*/
+    .avatar-small {left:5px;}
+    .reactbtn.add {right:95px;}
+    .reactbtn.deduct {right:-10px;}
+    
+    
 }
 
 @media only screen and (max-width : 360px) {    
@@ -168,6 +242,22 @@
      /* --- position ---*/
      .curtains {bottom:0;}
      .stage {padding-bottom:185px;}
+     
+     /* --- 問題內容 ---*/
+     .bullhorn {display:none;}
+     .question-content {bottom:0;
+        padding-left:20px; padding-right:20px; padding-bottom:15px; padding-top:18px; 
+        border-radius:20px 20px 0 0;
+     }
+     .question-content p {font-size:15px; line-height:19px;}
+     
+    .question-control {height:28px;}
+    .question-index {font-size:28px;}
+    .question-btn {height:28px; background-size:auto 28px;}
+    
+    /* --- 回答泡泡 ---*/
+    .bubble {border-radius:20px;}
+    .candidate .bubble:before {display:none;}
 
 }
 
@@ -184,6 +274,19 @@
      /* --- position ---*/
      .curtains {bottom:-20px;}
      .stage {padding-bottom:165px;}
+     
+     /* --- 回答泡泡 ---*/
+     .reactbtn {width:70px; height:70px;}
+    .reactbtn.add {right:75px;}
+    .reactbtn.deduct {right:-10px;}
+    
+    .reactbtn .txt {top:42px; font-size:15px;}
+    .reactbtn.add .txt {left:3px;}
+    .reactbtn.deduct .txt {right:3px;}
+    
+    .avatar-small {width:120px; height:120px; left:5px;}
+     
+     
 
 }
 
@@ -200,5 +303,9 @@
      /* --- position ---*/
      .curtains {bottom:-160px;}
      .stage {padding-bottom:140px;}
+     
+     /* --- 回答泡泡 ---*/        
+    .candidate .bubble {top:45px;}
+    .candidate.active .bubble {top:15px;}
 
 }

@@ -20,7 +20,7 @@ $candidateTrigger.click(function(){
     }
 });
 
-//$(".zhan .candidate-scalewpr").click();
+//$(".c01 .candidate-scalewpr").click();
 
 
 
