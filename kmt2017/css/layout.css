@@ -22,7 +22,7 @@ input {vertical-align:middle;}
 div,a {background-repeat:no-repeat;}
 
 /*--- container ---*/
-.container {position:relative; width:100%; height:100vh; overflow:hidden;
+.container {position:relative; width:100%; height:100vh; min-height:450px; overflow:hidden;
 background-color:#071624;
 background-image:url("../images/stage.png"); background-position:center bottom; background-size:1920px auto;
 }
@@ -242,6 +242,82 @@ font-family:"Press Start 2P"; font-size:20px;
 .flag {transform:scale(0.95);}
 .candidate-scalewpr {transform:scale(0.92);}
 /*.candidate-scalewpr {transform:none !important;}*/
+
+/* --- Opening ---*/
+.scene-cover {position:absolute; left:0; top:0; width:100%; height:100%; z-index:650; 
+background-image:url("../images/bg-cover.png"); background-size:cover; background-position:center center; 
+display:flex; justify-content:center; align-content:center; align-items:center; flex-wrap:wrap;
+}
+
+.opening-title {width:70%; overflow:hidden; margin-top:-160px;}
+.opening-title img {width:100%; margin:0 auto;}
+
+.opening-intro {width:100%; position:fixed; left:0; bottom:5%; text-align:center;}
+.opening-intro p {width:40%; margin:0 auto 25px auto;
+font-size:17px; color:#fff; text-align:center; line-height:140%;
+}
+.opening-start {display:block; width:180px; height:60px; margin:0 auto; cursor:pointer; position:relative;
+font-size:22px; line-height:70px; text-align:center; color:#fff; font-family:"Press Start 2P";
+background-color:#fc612b; border-radius:38px;
+transition:250ms; transition-property:width;
+}
+.opening-start:hover {width:196px;}
+
+/* --- Result ---*/
+.result-box {width:700px; height:80%; margin:0 auto; position:relative; z-index:700;
+text-align:left; box-shadow:0 2px 12px rgba(0,0,0,0.2);
+}
+
+.result-box-header {height:80px; padding:0 30px; position:relative; z-index:10;
+border-radius:20px 20px 0 0; background-color:#132b68;
+box-shadow:0 2px 6px rgba(0,0,0,0.2);
+}
+.result-box-header h1 {
+font-size:32px; font-weight:normal; color:#fff; line-height:80px;
+}
+
+.result-box-footer {height:80px; position:relative; z-index:10;
+border-radius:0 0 20px 20px; overflow:hidden;
+box-shadow:0 -2px 6px rgba(0,0,0,0.2);
+}
+.result-box-footer .btn {width:50%; display:block; cursor:pointer;
+line-height:80px; text-align:center; color:#fff; font-size:26px;
+}
+.result-box-footer .play {background-color:#dd5838; float:left; margin-left:-1px;}
+.result-box-footer .share {background-color:#02b4b2; float:right;}
+
+.result-box-content {position:relative; padding:0 30px; height:calc(100% - 160px); overflow:hidden;
+background-color:#10265f;
+}
+.result-entry {width:50%; padding:12px 0; float:left;
+display:flex; align-items:center;
+}
+.result-entry img {width:128px; margin-right:10px;}
+
+.result-entry-row {display:flex; align-items:center; padding:5px 0;}
+
+.result-entry span {font-size:22px; color:#fff; line-height:24px; display:inline-block; white-space:nowrap;}
+
+.result-entry .icon {display:inline-block; width:24px; height:24px; position:relative; margin-right:6px; }
+.result-entry .icon.circle {width:16px; height:16px;
+border:4px solid #23aab1; border-radius:100%;
+}
+.result-entry .icon.cross {transform-origin:center center; transform:rotate(45deg);}
+.result-entry .icon.cross:before,.result-entry .icon.cross:after {content:""; display:block; position:absolute;
+border-radius:2px; background-color:#d95a5b; 
+}
+.result-entry .icon.cross:before {width:25px; height:5px; left:0; top:10px;}
+.result-entry .icon.cross:after {width:5px; height:25px; left:10px; top:0; }
+
+.result-report {clear:both; margin:0 -30px; padding:30px; min-height:200px;
+border-top:1px solid #091a36; background-color:#0c204a;
+}
+.result-report h2 {color:#fff; font-weight:normal; font-size:28px; margin-bottom:20px; }
+.result-report li {list-style:disc; color:#ccc; margin-left:15px; margin-bottom:10px; padding-left:6px; }
+.result-report a {color:#c3c5cc; font-size:17px; line-height:120%; cursor:pointer; position:relative; left:0;
+transition:300ms; transition-property:color,left; 
+}
+.result-report a:hover {color:#fff; left:4px;}
 
 
 /* --- size detection ---*/
