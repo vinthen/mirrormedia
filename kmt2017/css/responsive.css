@@ -19,7 +19,7 @@
     .flag {transform:scale(0.8);}   
     
     /* --- 問題內容 ---*/
-    .question-content {left:40px;}
+    .question-content {left:40px; bottom:50px; padding-left:115px; }
     
     /* --- opening ---*/
     .opening-title {width:75%;}
@@ -38,6 +38,9 @@
     /* --- position ---*/
     .stage {padding-bottom:260px;}
     .curtains {bottom:40%;}
+    
+     /* --- 問題內容 ---*/
+    .question-content {bottom:40px; padding-left:110px;}
     
     /* --- 回答泡泡 ---*/
     .bubble  {top:130px;}
@@ -59,9 +62,10 @@
     .question-scalewpr {transform:scale(0.6);}
     
     /* --- 問題內容 ---*/
-    .question-content {left:30px; padding-left:100px;}
+    .question-content {width:420px; left:30px; bottom:30px; padding-left:100px;}
     .question-index {font-size:40px;}
     .bubble p,.question-content p {font-size:16px; line-height:22px;}
+    .question-content p {min-height:44px;}
     
 }
 
@@ -72,6 +76,9 @@
     
     /* --- others ---*/
     .counter .count {line-height:31px;}
+    
+    /* --- 問題內容 ---*/
+    .question-content {width:400px;}
     
 }
 
@@ -109,6 +116,7 @@
     
     /* --- 問題內容 ---*/
     .bubble p,.question-content p {font-size:15px; line-height:21px;}
+    .question-content p {min-height:42px;}
     
     /* --- 回答泡泡 ---*/
     .bubble  {top:180px; width:280px; padding:20px 30px 45px 30px;}
@@ -173,7 +181,7 @@
     .curtains {bottom:18%;}
     
     /* --- 問題內容 ---*/
-    .question-content p {margin-bottom:10px;}
+    .question-content p {margin-bottom:20px;}
     
     /* --- 回答泡泡 ---*/
     .avatar-small {display:block;}
@@ -209,8 +217,9 @@
 @media only screen and (max-width : 590px) {  
     
     /* --- 問題內容 ---*/
-    .question-content {width:calc(100vw - 45px); right:15px; bottom:15px;
-        padding-right:30px; padding-bottom:10px; 
+    .question-content {width:340px; padding-right:60px; }
+    .btn-end {width:120px; height:120px; right:-90px; margin-top:-60px;
+          font-size:26px; line-height:50px;        
     }
     
     /* --- opening ---*/
@@ -240,16 +249,19 @@
     .stage {padding-bottom:200px;}
     
     /* --- 問題內容 ---*/
-    .bullhorn {bottom:-105px; left:-165px;}
-    .question-content {width:calc(100vw - 20px); left:10px; bottom:10px; right:10px;
-        padding-left:30px; padding-right:25px; padding-top:20px; 
-        border-radius:30px;
+    .bullhorn {display:none;}
+    .question-content {width:290px; left:10px; padding-left:25px;
+        border-radius:20px;
     }
-    .question-content p {font-size:16px; line-height:22px;}
+    .question-content p {font-size:16px; line-height:22px; min-height:44px;}
     
     .question-control {height:32px;}
     .question-index {font-size:32px;}
     .question-btn {height:32px; background-size:auto 32px;}
+    
+    .btn-end {position:fixed; right:6px; bottom:40px; top:auto; margin-top:0;
+        font-size:22px; line-height:50px;
+    }
     
     /* --- 回答泡泡 ---*/
     .candidate .bubble {left:10px; width:calc(100vw - 20px);}
@@ -278,6 +290,14 @@
     .reactbtn.add {right:95px;}
     .reactbtn.deduct {right:-10px;}
     
+     /* --- 問題內容 ---*/     
+     .question-content {bottom:20px; width:295px;
+        padding-left:25px; padding-right:80px; padding-bottom:15px; padding-top:18px; 
+        
+     }
+     .question-content p {font-size:15px; line-height:19px;}     
+     .btn-end {width:110px; height:110px; bottom:29px;}
+    
     
 }
 
@@ -294,13 +314,7 @@
      .stage {padding-bottom:185px;}
      
      /* --- 問題內容 ---*/
-     .bullhorn {display:none;}
-     .question-content {bottom:0;
-        padding-left:20px; padding-right:20px; padding-bottom:15px; padding-top:18px; 
-        border-radius:20px 20px 0 0;
-     }
-     .question-content p {font-size:15px; line-height:19px;}
-     
+     .question-content {width:260px; padding-right:70px;}     
     .question-control {height:28px;}
     .question-index {font-size:28px;}
     .question-btn {height:28px; background-size:auto 28px;}
@@ -327,6 +341,11 @@
      /* --- position ---*/
      .curtains {bottom:-20px;}
      .stage {padding-bottom:165px;}
+     
+     /* --- 問題內容 ---*/
+     .question-content {width:250px; left:3px; padding-left:15px; }  
+     .btn-end {width:96px; height:96px; bottom:34px; right:3px; font-size:19px; line-height:40px;}
+     .btn-end:after {width:40px; margin-left:-20px; }
      
      /* --- 回答泡泡 ---*/
      .reactbtn {width:70px; height:70px;}

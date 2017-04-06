@@ -40,8 +40,8 @@ background-color:#1c1d29; border-radius:100%;
 background-image:url("../images/bullhorn.png"); background-size:100% auto;
 }
 
-.question-content {width:560px; padding:25px 40px 20px 120px;
-position:absolute; left:85px; bottom:25px;
+.question-content {width:470px; padding:25px 80px 20px 130px;
+position:absolute; left:70px; bottom:80px;
 background-color:rgba(29,43,75,0.97); border-radius:100px 30px 30px 100px;
 box-sizing:border-box;
 pointer-events:auto;
@@ -59,8 +59,18 @@ background-image:url("../images/question-arrow.svg"); background-size:auto 37px;
 .question-btn.next {background-position:right center;}
 .question-btn.disabled {opacity:0; cursor:default;}
 
-.question-content p {color:#fff; font-size:18px; line-height:26px; margin-bottom:20px; 
-/*min-height:78px;*/
+.question-content p {color:#fff; font-size:18px; line-height:26px; min-height:52px; margin-bottom:25px;}
+
+/* --- End button ---*/
+.btn-end {width:140px; height:140px; position:absolute; right:-120px; top:50%; margin-top:-70px; cursor:pointer;
+display:flex; justify-content:center; align-items:center;
+font-size:28px; line-height:60px; color:#fff;
+background-color:#e54427; border-radius:100%; opacity:0.92;
+transition:400ms opacity;
+}
+.btn-end:hover {opacity:1;}
+.btn-end:after {content:""; display:block; width:58px; height:6px; position:absolute; left:50%; top:50%; margin:-3px 0 0 -29px;
+background-color:#ff8159;
 }
 
 
@@ -318,7 +328,6 @@ border-top:1px solid #091a36; background-color:#0c204a;
 transition:300ms; transition-property:color,left; 
 }
 .result-report a:hover {color:#fff; left:4px;}
-
 
 /* --- size detection ---*/
 .detecion {position:fixed; left:5px; bottom:5px; pointer-events:none; z-index:10000; opacity:1;
