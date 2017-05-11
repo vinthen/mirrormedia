@@ -9,7 +9,7 @@ article,aside,canvas,figure,figure img,figcaption,footer,header,hgroup,menu,nav,
 
 /*--- global ---*/
 html {overflow-y:scroll; background-color:#2e251c;}
-body {text-align:center; font-size:16px; line-height:26px; font-family:"微軟正黑體", "Microsoft JhengHei", sans-serif; color:#e1dfdd;}
+body {text-align:center; font-size:17px; line-height:27px; font-family:"微軟正黑體", "Microsoft JhengHei", sans-serif; color:#b6a499;}
 h1,h2,h3,h4,h5,h6 {margin:0; line-height:23px;}
 p {text-align:justify; text-justify:distribute; margin-bottom:26px;}
 table {border-collapse:collapse; border-spacing:0; table-layout:fixed; border:1px solid #000;}
@@ -31,6 +31,9 @@ input {vertical-align:middle;}
 .opening__logo {display:block; width:144px; height:60px; position:absolute; top:15px; left:20px; cursor:pointer;
 background-image:url("../images/logo.png"); background-repeat:no-repeat; background-size:144px auto; background-position:left top;
 }
+
+/*--- top intro ---*/
+.topintro {width:740px; margin-bottom:120px;}
 
 /* --- section ---*/
 .section {position:relative; margin:0 auto;}
@@ -110,6 +113,17 @@ background-color:#362822; border-radius:20px;
 }
 .c02__cheap {width:251px; height:169px; position:absolute; right:-52px; top:-52px;
 background-image:url("../images/vdata/c-cheap.png"); background-repeat:no-repeat; background-size:251px auto;
+}
+
+.c05 {width:600px;}
+.c05__intro {margin-left:32px; margin-bottom:0;
+font-size:18px; color:#b8b6b4; line-height:30px;
+}
+.c05__intro strong {color:#fff; font-size:23px; font-weight:bold;}
+.c05__footer {font-size:21px; color:#fff; line-height:36px;}
+.c05__footer-period {display:inline-block; width:140px; height:36px; margin:0 46px;
+text-align:center; font-weight:bold;
+border-radius:36px; background-color:#207a7d;
 }
 
 
