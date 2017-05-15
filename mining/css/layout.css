@@ -214,6 +214,21 @@ border-radius:100%;
 .choice-result {background-color:#271f19; padding:80px 0;}
 .choice-result__img {max-width:1134px;}
 
+/* --- article content ---*/
+.article-container {
+background-image:url("../images/bg-paper.jpg");
+/*background-color:#271f19;*/
+}
+article {max-width:850px; margin:0 auto; padding:100px 25px;
+color:#412d25;
+}
+article section {margin-bottom:56px; padding-bottom:4px;}
+article h1 {font-size:36px; margin-bottom:36px;}
+article h2 {font-size:28px; margin-bottom:36px; padding:22px 12px; display:inline-block;
+border-top:3px dotted #412d25; border-bottom:3px dotted #412d25;
+}
+article p {text-align:left;}
+
 
 /* --- table ---*/
 .tablewpr {width:600px; margin:0 auto; 
