@@ -7,15 +7,21 @@
 
 @media only screen and (max-width : 1000px) {
 
-    /*.opening__heroimg {background-size:170% auto;}*/
     .opening__heroimg {width:170%; margin-left:-35%;}
+
+
+}
+
+@media only screen and (max-width : 900px) {
+
+    article h2 {font-size:24px;}
+    h2.medal {}
 
 
 }
 
 @media only screen and (max-width : 700px) {
 
-    /*.opening__heroimg {background-size:190% auto;}*/
     .opening__heroimg {width:190%; margin-left:-45%;}
 
 
@@ -23,7 +29,6 @@
 
 @media only screen and (max-width : 500px) {
 
-    /*.opening__heroimg {background-size:210% auto;}*/
     .opening__heroimg {width:210%; margin-left:-55%;}
 
 }
