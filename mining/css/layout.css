@@ -282,7 +282,7 @@ background-color:#271f19; border-bottom:20px solid #dbd5d1;
 .part2__badgeshock {width:232px; height:250px; position:absolute; left:50%; top:-30px;
 margin-left:-116px;
 background-image:url("../images/badge-shock.png"); background-repeat:no-repeat;
-background-size:232px auto;
+background-size:100% auto;
 }
 
 .part2__sectitle {border-top:none;}
@@ -327,10 +327,6 @@ background-color:rgba(81,62,53,0.1);
 background-image:url("../images/bg-paper.jpg");
 border-bottom:8px solid #2c241f;
 }
-.article-container.part3:after {content:""; display:block; width:680px; height:113px; position:absolute; bottom:0; left:50%; margin-left:-340px;
-background-image:url("../images/miningcart.png"); background-repeat:no-repeat;
-background-size:680px auto;
-}
 
 article {max-width:850px; margin:0 auto; padding:100px 25px 5px 25px;}
 .part2 article,.part2-2 article {color:#412d25;}
@@ -374,6 +370,12 @@ background-image:url("../images/icon-infobox.png"); background-repeat:no-repeat;
 background-size:24px auto; background-position:0 0;
 }
 
+p a {display:inline-block; padding:0 5px;
+font-weight:bold; color:#412d25;
+border-bottom:2px dotted #412d25; cursor:pointer;
+transition:250ms background-color;
+}
+p a:hover {background-color:rgba(255,255,255,0.9);}
 
 /* --- css table ---*/
 .tablewpr {width:100%; margin:0 auto 5px auto; 
@@ -453,10 +455,53 @@ border-left:3px dotted #928f8d;
 }
 
 /* --- footer ---*/
-footer {min-height:100px;
+footer {min-height:100px; position:relative;
 background-color:#221c16;
 }
+footer:before {content:""; display:block; width:680px; height:120px; position:absolute; top:-113px; left:50%; margin-left:-340px;
+background-image:url("../images/miningcart.png"); background-repeat:no-repeat;
+background-size:680px auto; z-index:200; 
+}
 
+/* --- lightbox ---*/
+html.stop-scroll {overflow-y:hidden;}
+
+.lightbox {width:100vw; height:100vh; position:fixed; left:0; top:0; z-index:1000;
+pointer-events:none;
+}
+.lightbox.show {pointer-events:auto;}
+
+.lightbox__overlay {width:100%; height:100%; position:absolute; left:0; top:0;
+background-color:rgba(231,226,222,0.92); opacity:0;
+/*transition:250ms opacity;*/
+}
+.show .lightbox__overlay {opacity:1;}
+
+.lightbox__content {width:70%; max-width:700px; height:90%; margin:0 auto; position:relative; top:0; box-sizing:border-box; padding:40px 0 60px 0;
+color:#5d4c45; font-size:15px; line-height:23px;
+background-color:#f3f1ef; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); 
+opacity:0;
+transition:400ms; transition-property:opacity,top;
+}
+.show .lightbox__content {opacity:1; top:5%;}
+
+.lightbox__scrollwpr {height:100%; padding:0 45px; overflow-y:auto;
+text-align:left;
+}
+
+.lightbox section {margin-bottom:30px; padding:4px;}
+.lightbox h1 {font-size:24px; margin-bottom:20px; padding:14px 6px; line-height:120%;
+border-top:3px dotted #5d4c45; border-bottom:3px dotted #5d4c45;
+}
+.lightbox ol {margin-bottom:26px; margin-left:18px;}
+.lightbox ol li {list-style:decimal; margin-bottom:4px;}
+
+.lightbox__close {width:150px; height:40px; position:absolute; bottom:12px; left:50%; margin-left:-75px; cursor:pointer;
+color:#fff; text-align:center; font-size:18px; line-height:40px; letter-spacing:2px;
+background-color:#66443f; border-radius:40px;
+transition:400ms background-color;
+}
+.lightbox__close:hover {background-color:#5a3a36;}
 
 /* --- size detection ---*/
 .detecion {position:fixed; right:5px; bottom:0; pointer-events:none; z-index:10000; opacity:0.4;
