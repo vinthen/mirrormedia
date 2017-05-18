@@ -1,35 +1,90 @@
 @charset "utf-8";
 @media only screen and (max-width : 1200px) {
-
     .opening__heroimg {width:150%; margin-left:-25%;}
-
 }
 
 @media only screen and (max-width : 1000px) {
-
     .opening__heroimg {width:170%; margin-left:-35%;}
-
-
+    .choice-result__img p {bottom:28px;
+    font-size:17px; line-height:25px;
+    }
 }
 
 @media only screen and (max-width : 900px) {
-
     article h2 {font-size:24px;}
-    h2.medal {}
+    .choice-result__img p {bottom:20px; 
+    font-size:16px; line-height:24px;
+    }
+}
 
+@media only screen and (max-width : 810px) {
+
+    .credit {bottom:19%;}
+    .credit p {font-size:16px; line-height:22px;}
+
+    .choice__box {margin-bottom:150px;}
+    .choice__pilltext {top:420px;}
+    .choice__pilltext.blue {right:390px;}
+    .choice__pilltext.red {left:370px;}
+    .choice__pilltext.red p {padding-left:24px;}
+
+    .choice-result__img img {max-width:116%; margin-left:-8%;}
+    
+    article h2 {font-size:23px;}
+    h2.medal:before {left:-77px;}
+    h2.medal:after {right:-77px;}
+
+    .v04__icon .price {margin-right:25px;}
+    .v04__cheap {right:-30px;}    
 
 }
 
 @media only screen and (max-width : 700px) {
 
+    body {font-size:16px; line-height:24px;}
+
+    .opening {margin-bottom:50px;}
     .opening__heroimg {width:190%; margin-left:-45%;}
+    .topintro__title {font-size:21px;}
+
+    .credit {bottom:12%;}
+    .credit p {font-size:16px; line-height:22px;}
+
+    .h3__bgcolor {font-size:22px;}
+
+    .v04__icon {left:15px;}
+    .v04__icon .import i {margin-right:5px;}
+    .v04__icon .price {margin-right:10px;}
+    .v04__cheap {width:142px; right:0; top:-54px;
+    background-size:160px auto;
+    }
+
+    .choice__title span {font-size:28px; padding-left:100px; padding-right:31px;}
+    .choice__box {}
+
+    .choice-result__img img {max-width:186%; margin-left:-43%;}
+    .choice-result__img p {width:80%; margin-left:-40%;
+    }
+
+    h2.medal:before,h2.medal:after {display:none;}
+
+    .part2__sectitle:before {left:-30px; top:-80px;}
+
+    .part2__footer {overflow:hidden; width:100%; left:0; margin-left:0;}
+    .part2__footer:before {left:-30px;}
+    .part2__footer:after {right:-30px;}
+
+    footer:before {background-size:580px auto; top:-100px;}
+
 
 
 }
 
 @media only screen and (max-width : 500px) {
-
     .opening__heroimg {width:210%; margin-left:-55%;}
+
+    
+
 
 }
 
