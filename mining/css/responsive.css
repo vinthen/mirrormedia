@@ -18,6 +18,8 @@
 
 @media only screen and (max-width : 810px) {
 
+    .opening__btngroup {left:10px; top:10px;}
+
     .credit {bottom:19%;}
     .credit p {font-size:16px; line-height:22px;}
 
@@ -79,7 +81,6 @@
     .part2__footer:before {left:-30px;}
     .part2__footer:after {right:-30px;}
 
-    /*footer:before {background-size:580px auto; top:-100px;}*/
 
 }
 
@@ -102,7 +103,7 @@
 
 @media only screen and (max-width : 500px) {
     .opening__heroimg {width:210%; margin-left:-55%;}
-    .opening__logo {display:none;}
+    .opening__btngroup {top:8px;}
 
     .choice__pilltext.blue {left:30px;}
     .choice__pilltext.red {right:30px;}
