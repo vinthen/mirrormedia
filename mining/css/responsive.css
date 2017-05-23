@@ -207,9 +207,12 @@
 
     .part2-2 .table__head,.part2-2 .table__cell {line-height:18px; font-size:14px;}   
 
-    footer:before {height:96px; top:-82px;
+    /*footer:before {height:96px; top:-82px;
     background-size:500px auto;
-    } 
+    } */
+    .article-container.part3:after {height:96px; bottom:-13px;
+    background-size:500px auto;
+    }
     
 }
 
