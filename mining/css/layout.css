@@ -30,7 +30,9 @@ input {vertical-align:middle;}
 /*.opening__logo {display:block; width:144px; height:60px; position:absolute; top:15px; left:20px; cursor:pointer;
 background-image:url("../images/logo.png"); background-repeat:no-repeat; background-size:144px auto; background-position:left top;
 }*/
-.opening__btngroup {width:90px; height:40px; position:absolute; left:16px; top:16px;}
+.opening__btngroup {width:90px; height:40px; position:absolute; left:16px; top:16px;
+position:fixed; z-index:3000; 
+}
 .opening__btngroup:after {content:""; display:table; clear:both;}
 .opening__btngroup a {display:block; width:40px; height:40px; cursor:pointer;
 background-image:url("../images/topbtn.png"); background-repeat:no-repeat; background-size:auto 100%;
