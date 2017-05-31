@@ -31,7 +31,7 @@ function closeLightbox(){
 
 
 
-
+/*
 var $window = $(window);
 
 function scrollDetect(){
@@ -63,6 +63,6 @@ $window.scroll(scrollDetect);
 
 //window resize
 $window.resize(sizeDetect).trigger("resize");
-
+*/
 
 });
