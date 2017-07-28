@@ -1,0 +1,206 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+/*--- reset ---*/
+body,dl,dt,dd,ul,ol,li,th,td,form,input,textarea,p {margin:0; padding:0;}
+img {display:block; border:0;}
+li {list-style:none}
+sup {vertical-align:text-top;}
+sub {vertical-align:text-bottom;}
+article,aside,canvas,figure,figure img,figcaption,footer,header,hgroup,menu,nav,section,audio,video {display:block; margin:0; padding:0;}
+
+h1,h2,h3,h4,h5,h6 {margin:0; line-height:100%;}
+p {text-align:justify; text-justify:distribute;}
+a {outline:none; text-decoration:none;}
+input {vertical-align:middle;}
+.clear {clear:both;}
+
+/*--- common ---*/
+html {overflow-y:scroll;}
+body {font-family:"Noto Sans TC","微軟正黑體", "Microsoft JhengHei", sans-serif; line-height:150%;
+}
+.puncfix {margin-left:-9px;}
+
+/* --- nav ---*/
+.nav {width:58px; height:100%; position:fixed; left:0; top:0; z-index:9999;
+background-color:#3e3532;
+}
+
+.nav--btn {display:block; width:40px; height:40px; position:absolute; left:9px;
+background-image:url("../images/navbtn.png"); background-repeat:no-repeat;
+background-size:auto 40px;
+}
+.nav--btn.mirrormedia {top:10px;
+background-position:0 0;
+}
+.nav--btn.share {top:60px;
+background-position:right 0;
+}
+
+.nav--title {width:20px; height:370px; position:absolute; left:50%; top:50%;
+margin-left:-10px; margin-top:-185px;
+background-image:url("../images/nav-title.png"); background-repeat:no-repeat;
+background-size:100% auto;
+}
+
+.nav--lang {width:100%; height:56px; display:block; position:absolute; left:0;
+color:#c3afaa; font-size:15px; line-height:50px; text-align:center; font-weight:bold;
+}
+.nav--lang:hover {color:#fff;}
+.nav--lang.active {background-color:#5e443b; color:#fff;}
+
+.nav--lang.cht {bottom:56px;}
+.nav--lang.eng {bottom:0;}
+
+
+/* --- card ---*/
+.cardBoard {height:100vh; position:relative; margin:0 auto;
+background-image:url("../images/bg-paper.jpg");
+box-shadow:0 0 10px rgba(0,0,0,0.4);
+}
+.cardBoard.dark {background-image:url("../images/bg-paper-dark.jpg");}
+
+.pinSection {margin-bottom:600px;}
+.pinSection:last-child {margin-bottom:0;}
+
+.cardwpr {width:calc(100% - 350px); height:100%; padding:25px 25px 25px 83px;
+display:flex; justify-content:center; align-items:center;    
+box-sizing:border-box;
+}
+
+.fullwidth .cardwpr {width:100%; margin:0 auto;}
+
+.card {max-height:100%; max-width:100%;
+margin:0 auto;
+}
+
+.desc {width:350px; height:100%; position:absolute; right:0; top:0;
+display:flex; justify-content:center; align-items:center;
+background-color:rgba(244,238,234,0.25);
+}
+
+.desc--content {padding:40px 44px 40px 48px; position:relative;
+width:100%; box-sizing:border-box;
+}
+
+.desc--content:before,.desc--content:after {content:""; display:block; width:100%; height:20px;
+position:absolute; left:0;    
+background-image:url("../images/hr.png"); background-repeat:no-repeat;
+background-size:auto 20px; background-position:center 0;
+}
+.desc--content:before {top:0;}
+.desc--content:after {bottom:0;}
+
+.desc p {
+font-size:17px; color:#5a3a30; line-height:29px; font-weight:400;
+letter-spacing:1px;
+}
+.ccr {margin:0 2px; opacity:0.7;
+text-decoration:line-through;
+}
+
+.desc strong {padding:0 3px;
+font-weight:normal;
+background-color:rgba(255,218,142,0.7);
+border-bottom:2px solid rgba(65,45,37,0.2);
+}
+
+.pager {width:100%; position:absolute; left:0; bottom:-38px;
+font-size:22px; font-weight:600; color:#5a3a30;
+text-align:center; line-height:32px;
+} 
+.pager * {vertical-align:middle;}
+
+.pager--current {display:inline-block; width:32px; height:32px;
+color:#fff; text-align:center;
+background-color:#5e3d33; border-radius:50%;
+}
+
+.fullwidth .pager {left:auto; right:0; bottom:30px;}
+
+.pager--btn {display:inline-block; width:41px; height:36px; cursor:pointer;
+background-image:url("../images/page-arrow.png"); background-repeat:no-repeat;
+background-size:80px auto;
+}
+.pager--btn.prev {background-position:6px 0; margin-right:8px;}
+.pager--btn.next {background-position:-44px 0; margin-left:4px;}
+
+.pager--btn.prev:hover {background-position:6px -49px;}
+.pager--btn.next:hover {background-position:-44px -49px;}
+
+/* --- interview ---*/
+.interview {position:relative; height:auto;} 
+.interview:after {content:""; display:table; clear:both;}
+
+.interview .pager {width:100%; position:relative; left:auto; right:auto; bottom:auto;
+clear:both; margin-bottom:20px;
+}
+
+.interview--brief {width:28%; height:100%; float:left; position:relative;
+padding-left:58px;
+box-sizing:border-box;
+}
+
+.interview--portrait {height:280px; padding-top:40px; margin-bottom:20px;
+text-align:center;
+}
+.interview--portrait img {margin:0 auto; height:100%;}
+
+.interview--quote {width:75%; margin:0 auto; padding:22px 26px; position:relative;
+font-size:18px; color:#5a3a30; line-height:28px; font-weight:400;    
+box-sizing:border-box;    
+background-color:#f3dbcc; border-radius:22px;
+box-shadow:0 0 0 4px #5a4841;
+}
+.interview--quote:after {content:""; display:block; width:40px; height:35px;
+position:absolute; left:50px; top:-35px;
+background-image:url("../images/card/quote-prot.png"); background-repeat:no-repeat;
+background-size:100% auto;
+}
+.foreign .interview--quote {background-color:#c6e4d6;}
+.foreign .interview--quote:after {background-image:url("../images/card/quote-prot2.png");}
+
+.interview--border {width:72%; float:right; position:relative;
+padding:40px 55px 0 0; margin-bottom:20px; box-sizing:border-box;
+}
+.interview--content {
+font-size:18px; color:#5a3a30; line-height:30px; font-weight:300;
+box-sizing:border-box; padding-top:10px; padding-bottom:9px;
+border-bottom:3px dotted #5a3a30;
+} 
+
+.interview--border h1 {margin-bottom:20px;
+font-size:26px; font-weight:500; color:#5a3a30; line-height:40px;
+} 
+.interview--border h1 .circle {display:inline-block; width:40px;
+text-align:center; margin-right:2px;
+background-color:#9d413e; color:#fff;
+border-radius:100%;
+}
+.interview--border h1 .circle.c1 {margin-right:-5px;}
+
+.foreign .interview--border h1 .circle {background-color:#16809f;} 
+
+.interview--content h2 {margin-bottom:10px; padding-top:10px;
+font-size:20px; font-weight:500;
+}
+
+.interview--content p {margin-bottom:30px;}
+.dark .interview--content p {color:#4b2d24;}
+
+.interview--content strong {padding:0 3px;
+font-weight:300;
+background-color:rgba(255,218,142,0.6);
+border-bottom:2px solid rgba(65,45,37,0.2);
+}
+
+.interview--intro {margin-bottom:30px; padding-bottom:30px;
+font-weight:400; font-size:18px;
+border-bottom:3px dotted #5a3a30;
+}
+.interview--intro li {margin-left:18px; margin-bottom:3px; padding-left:4px;
+list-style:disc;
+}
+
+/* --- 單張卡片設定 ---*/
+.card01 {margin-bottom:0;}
+ .card017 .card {max-height:88%;} 

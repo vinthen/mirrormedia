@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+@media only screen and (max-width : 1400px) {
+    .cardwpr {width:calc(100% - 300px);}
+    .desc {width:300px;}
+
+    .desc--content:before,.desc--content:after {background-image:url("../images/hr-middle.png");}
+}
+
+@media only screen and (min-width : 1824px) {
+/* Styles */
+}
