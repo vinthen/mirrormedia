@@ -91,7 +91,7 @@ background-size:auto 20px; background-position:center 0;
 .desc--content:after {bottom:0;}
 
 .desc p {
-font-size:17px; color:#5a3a30; line-height:29px; font-weight:400;
+font-size:17px; color:#5a3a30; line-height:27px; font-weight:400;
 letter-spacing:1px;
 }
 .ccr {margin:0 2px; opacity:0.7;
@@ -115,7 +115,7 @@ color:#fff; text-align:center;
 background-color:#5e3d33; border-radius:50%;
 }
 
-.fullwidth .pager {left:auto; right:0; bottom:30px;}
+.fullwidth .pager {left:auto; right:0; bottom:15px;}
 
 .pager--btn {display:inline-block; width:41px; height:36px; cursor:pointer;
 background-image:url("../images/page-arrow.png"); background-repeat:no-repeat;
@@ -180,8 +180,10 @@ border-radius:100%;
 
 .foreign .interview--border h1 .circle {background-color:#16809f;} 
 
-.interview--content h2 {margin-bottom:10px; padding-top:10px;
+.interview--content h2 {margin-bottom:14px; padding-top:10px; padding-left:23px;
 font-size:20px; font-weight:500;
+background-image:url("../images/card/arrow.png"); background-repeat:no-repeat;
+background-size:14px auto; background-position:0 13px;
 }
 
 .interview--content p {margin-bottom:30px;}
@@ -201,6 +203,66 @@ border-bottom:3px dotted #5a3a30;
 list-style:disc;
 }
 
+/* --- conclusion ---*/
+.conclusion {height:auto; min-height:100vh;}
+.conclusion .cardwpr {display:block; width:100%; padding-top:15px;}
+
+.conclusion--center {max-width:1200px; margin:0 auto; position:relative;}
+.conclusion--center:after {content:""; display:table; clear:both;}
+.conclusion--content {padding:40px 50px 25px 50px; position:relative;
+color:#5a3a30; font-size:18px; line-height:30px;
+background-color:rgba(207,181,172,0.6);
+box-shadow:0 0 0 5px #5a3a30; border-radius:4px;
+box-sizing:border-box;
+}
+
+.conclusion--title {width:100%; height:auto; max-width:700px; margin-bottom:-34px;
+position:relative; z-index:200; 
+}
+.conclusion--title img {width:100%;}
+
+.conclusion p {margin-bottom:20px;}
+.conclusion strong {padding:0 3px;
+font-weight:normal;
+background-color:rgba(255,218,142,0.6);
+border-bottom:2px solid rgba(65,45,37,0.2);
+}
+
+/* .conclusion--last {padding-right:270px;}  */
+
+.conclusion hr {width:100%; height:3px;
+background-image:url("../images/card/hr-dotted.png"); background-repeat:repeat-x;
+border:none;
+background-size:auto 100%;
+position:relative; top:10px; margin-bottom:37px;
+}
+
+.conclusion--badge {width:306px; position:relative; right:-20px; top:-65px; float:right;
+margin-bottom:-65px;
+} 
+.conclusion--badge img {width:100%;}
+
+/* --- credit ---*/
+.credit {float:left; margin-top:40px; margin-left:40px;
+color:#5a3a30; font-size:16px; line-height:24px;
+position:relative;
+}
+.credit:after {content:""; display:table; clear:both;}
+/* .credit:before {content:""; display:block; width:4px; height:100%;
+position:absolute; left:0; top:0;
+background-color:#99665b; border-radius:4px;
+border:2px solid #5a3a30;
+}  */
+
+.credit h1 {float:left; padding-top:48px; width:90px; margin-right:20px;
+font-size:22px; font-weight:500; text-align:center;
+background-image:url("../images/credit.png"); background-repeat:no-repeat;
+background-size:90px auto; background-position:0 3px;
+}
+.credit--group {float:left;}
+.credit p {margin-bottom:0;} 
+.credit--slash {margin:0 6px;}
+
 /* --- 單張卡片設定 ---*/
 .card01 {margin-bottom:0;}
- .card017 .card {max-height:88%;} 
+.card017 .cardwpr,.card020 .cardwpr,.card022 .cardwpr {padding-bottom:65px;} 
