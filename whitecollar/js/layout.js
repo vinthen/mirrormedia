@@ -19,7 +19,7 @@ $card.filter(":odd").addClass("dark");
 }
 
 //only for firefox preview
-$card.filter(":lt(22)").remove();
+// $card.filter(":lt(22)").remove();
 
 
 //init ScrollMagic
