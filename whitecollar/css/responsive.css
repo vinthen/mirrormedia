@@ -1,12 +1,85 @@
 @charset "utf-8";
 
-@media only screen and (max-width : 1400px) {
-    .cardwpr {width:calc(100% - 300px);}
-    .desc {width:300px;}
+@media only screen and (max-width: 1400px) {
 
-    .desc--content:before,.desc--content:after {background-image:url("../images/hr-middle.png");}
 }
 
-@media only screen and (min-width : 1824px) {
-/* Styles */
+@media only screen and (max-width: 1050px) {
+
+    .cardwpr {padding:15px;}
+    .conclusion .cardwpr {padding:25px 30px;}
+
+    .desc--content {padding:15px 40px 10px 40px;}
+    .desc--scrollwpr {margin-bottom:0;}
+    .desc p {font-size:15px; line-height:24px;}
+
+    .pager {transform:scale(0.8);}
+
+    .interview--brief {width:320px;}
+    .interview--border {width:calc(100% - 320px); margin-bottom:12px;}
+
+    /* --- 個別卡片設定 ---*/
+    .interview .pager {padding-bottom:12px;} 
+    .fullwidth .pager {padding-bottom:12px;} 
+
+
+} 
+
+@media only screen and (max-width: 950px) {
+    
+    /* 採訪改為單欄顯示 */
+    .interview--brief {display:none;}
+    .interview--border {width:100%; padding-left:45px;}
+    .cloneBrief {display:flex; width:100%;}
+    .interview--content {font-size:17px; line-height:29px;}
+} 
+
+/* 高 > 寬，顯示 compact mode  */
+.compactMode .nav {display:none;}
+
+/* card */
+.compactMode .cardBoard {padding-left:0;}
+
+.compactMode .cardwpr {padding:10px 5px;
+height:auto !important; 
+}  
+
+.compactMode .full__size {display:none;}
+.compactMode .compact__size {display:block;} 
+
+.compactMode .desc--content {padding-left:20px; padding-right:20px;}
+
+/* conclusion */
+.compactMode .conclusion .cardwpr {padding:10px 20px;}
+.compactMode .conclusion--content {padding-left:20px; padding-right:20px; margin-bottom:20px;
+font-size:17px; line-height:29px;
 }
+.compactMode .conclusion--badge {right:auto; top:auto; float:none; margin:0 auto;}
+.compactMode .credit {margin-left:0; margin-top:0;}
+.compactMode .credit h1 {padding:20px 0 12px 80px; float:none;
+background-size:80px auto; background-position:0 14px;    
+}
+
+/* interview */
+.compactMode .interview--border {padding:20px 20px 0 30px;}
+.compactMode .interview--border h1 {margin-bottom:4px;
+text-align:center; font-size:24px;
+}
+.compactMode .interview--content {
+font-size:17px; line-height:29px;    
+}
+.compactMode .interview--content p {margin-bottom:20px;}
+
+.compactMode .cloneBrief {display:block;}
+.compactMode .interview--portrait {margin:0 auto 20px auto;}
+
+.compactMode .cloneBrief .interview--quote:after {width:40px; height:35px;
+left:50px; top:-35px; margin-top:0;    
+background-image:url("../images/card/quote-prot.png");    
+}
+.compactMode .foreign .cloneBrief .interview--quote:after {
+background-image:url("../images/card/quote-prot2.png");   
+}
+
+/* hide page arrow */
+.compactMode .pager--btn {display:none;}
