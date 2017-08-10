@@ -29,7 +29,7 @@ $card.filter(":odd").addClass("dark");
 }
 
 //only for firefox preview
-// $card.filter(":lt(1)").remove();
+// $card.filter(":lt(21)").remove();
 
 /*
 //init ScrollMagic
@@ -101,8 +101,8 @@ function setImageHeight(){
 function sizeDetect(){
     var wwidth = $(window).width();
     var wheight = $(window).height();
-    $("#wwidth").text("vw:"+wwidth+"px"); //remove before publish
-    $("#wheight").text("vh:"+wheight+"px"); //remove before publish
+    //$("#wwidth").text("vw:"+wwidth+"px"); //remove before publish
+    //$("#wheight").text("vh:"+wheight+"px"); //remove before publish
 
     if(wheight > wwidth){
         $body.addClass("compactMode");
@@ -115,6 +115,7 @@ function sizeDetect(){
 $(window).resize(function(){
     sizeDetect();
     setImageHeight();
+    $(window).trigger("jqueryDone");
 }).trigger("resize");
 
 
