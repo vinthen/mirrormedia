@@ -108,14 +108,14 @@ background-image:url("../images/card/quote-prot2.png");
 .compactMode .pager--btn {display:none;}
 
 /* glance interview */
-.glaint {padding:0 20px;}
-.glaint--portrait {position:relative; height:auto; margin:0 auto;}
-.glaint--portrait img {margin:0 auto;}
+.compactMode .glaint {padding:0 20px;}
+.compactMode .glaint--portrait {position:relative; height:auto; margin:0 auto;}
+.compactMode .glaint--portrait img {margin:0 auto;}
 
-.glaint h1 {text-align:center;}
-.glaint--quote {width:100%; margin-bottom:10px;}
-.glaint--quote:after {display:none;}
-.glaint--btn {position:relative; top:auto; margin:0 auto;}
+.compactMode .glaint h1 {text-align:center;}
+.compactMode .glaint--quote {width:100%; margin-bottom:10px;}
+.compactMode .glaint--quote:after {display:none;}
+.compactMode .glaint--btn {position:relative; top:auto; margin:0 auto;}
 
 
 @media only screen and (max-width: 375px) {

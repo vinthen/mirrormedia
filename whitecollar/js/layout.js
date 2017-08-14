@@ -18,13 +18,13 @@ $card.filter(":odd").addClass("dark");
 
 //標示頁數
 {
-    let sum = $card.length -1; //扣掉開頭畫面
+    let sum = $card.length;
     $cardTotal.text(sum);
 
     $card.each(function(){
         let index = $(this).index();
         $(this).addClass("card" + "0" + index)
-        .find(".pager--current").text(index -1);
+        .find(".pager--current").text(index);
     });
 }
 
