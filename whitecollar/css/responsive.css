@@ -1,6 +1,19 @@
 @charset "utf-8";
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1190px) {
+
+        .glaint--portrait {width:260px;}
+        .glaint {padding-left:290px;
+            font-size:20px; line-height:28px;
+        }
+        .glaint h1 {margin-bottom:10px; font-size:28px; line-height:46px;}
+        .glaint .circle {width:46px; height:46px;
+            font-size:26px; line-height:46px;
+        }
+        .glaint ul {margin-bottom:20px;}
+        .glaint li {font-size:19px; line-height:25px; margin-bottom:3px;}
+        .glaint--quote {width:calc(100% - 220px);}
+        .glaint--btn {width:200px; margin-top:-100px;}
 
 }
 
@@ -93,3 +106,21 @@ background-image:url("../images/card/quote-prot2.png");
 
 /* hide page arrow */
 .compactMode .pager--btn {display:none;}
+
+/* glance interview */
+.glaint {padding:0 20px;}
+.glaint--portrait {position:relative; height:auto; margin:0 auto;}
+.glaint--portrait img {margin:0 auto;}
+
+.glaint h1 {text-align:center;}
+.glaint--quote {width:100%; margin-bottom:10px;}
+.glaint--quote:after {display:none;}
+.glaint--btn {position:relative; top:auto; margin:0 auto;}
+
+
+@media only screen and (max-width: 375px) {
+
+    .glaint {padding:0 10px; font-size:18px; line-height:26px;}
+    .glaint li {font-size:17px; line-height:23px;}
+
+} 
