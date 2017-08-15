@@ -50,14 +50,11 @@
 /* 高 > 寬，顯示 compact mode  */
 
 /* nav */
-.compactMode .nav {position:absolute; width:100%; height:50px;
-background-color:transparent;
-}
+.compactMode .nav {width:55px; left:auto; right:0; background-color:transparent;}
 .compactMode .nav--btn {background-image:url("../images/navbtn-compact.png");}
-.compactMode .nav--btn.mirrormedia {top:10px;}
-.compactMode .nav--btn.share {top:10px; left:55px;}
+.nav--btn.share {top:58px;}
 .compactMode .nav--title {display:none;}
-.compactMode .nav--lang {display:none;}
+
 
 /* card */
 .compactMode .cardBoard {padding-left:0;}

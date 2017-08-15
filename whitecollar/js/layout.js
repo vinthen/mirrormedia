@@ -18,18 +18,18 @@ $card.filter(":odd").addClass("dark");
 
 //標示頁數
 {
-    let sum = $card.length;
+    let sum = $card.length -1; //扣掉首圖
     $cardTotal.text(sum);
 
     $card.each(function(){
         let index = $(this).index();
         $(this).addClass("card" + "0" + index)
-        .find(".pager--current").text(index);
+        .find(".pager--current").text(index -1);
     });
 }
 
 //only for firefox preview
-// $card.filter(":lt(9)").remove();
+// $card.filter(":lt(4)").remove();
 
 /*
 //init ScrollMagic

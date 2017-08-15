@@ -353,14 +353,73 @@ margin-top:-120px; cursor:pointer;
 }
 .glaint--btn img {width:100%;}
 
-/* --- home page ---*/
-.home .desc {height:30px; text-align:center;}
-.verbtn {display:inline-block; margin-right:20px;}
-.verbtn:last-child {margin-right:0;}
-
+/* --- back home ---*/
 .backhome {display:block; width:100%; height:90px; position:absolute; left:0; bottom:0;
-background-color:#f48f7e;
+background-color:#2d2624;
+background-image:url("../images/backtop.png"); background-repeat:no-repeat;
+background-size:38px auto; background-position:center center;
+transition:400ms; transition-property:background-color;
 }
+.backhome:hover {background-color:#282220;}
+
+.compactMode .backhome {width:40px; height:40px; position:fixed; left:auto; right:6px; bottom:30px;
+background-image:url("../images/backtop-compact.png");
+background-size:100% auto; border-radius:100%;
+background-color:#3e3532;
+}
+
+/* --- idle ---*/
+.idlebox {width:100%; height:100%; position:fixed; left:0; top:0; z-index:9999; 
+display:flex; justify-content:center; align-items:center;    
+background-color:rgba(62,53,50,0.9);
+}
+.idlebox--content {position:relative; padding:30px 40px; margin:0 auto;
+color:#5a3a30;    
+display:flex; justify-content:center; align-items:center; 
+background-color:#fff; border-radius:10px;
+box-shadow:0 0 8px rgba(0,0,0,0.6);
+box-sizing:border-box;
+}
+.idlebox--content:after {content:""; display:table; clear:both;}
+.idlebox--bear {width:200px;}
+.idlebox--bear img {width:100%;}
+
+.idle--group {text-align:center;}
+.idle--group h1 {margin-bottom:15px;
+font-size:50px; font-weight:bold;
+}
+.idle--group p {margin-bottom:30px; 
+font-size:26px; text-align:center;
+}
+
+.idle--btn {display:inline-block; cursor:pointer;
+font-size:22px;
+}
+.idle--btn.yes {padding:10px; margin-right:10px;
+font-weight:bold;
+background-color:#87e4ce; border:4px solid #5a3a30;
+border-radius:6px;
+transition:400ms; transition-property:background-color;
+}
+.idle--btn.yes:hover {background-color:#79f2d9;}
+
+.idle--btn.no {padding-bottom:6px;
+border-bottom:3px dotted #7e6862;
+transition:400ms; transition-property:color;
+}
+.idle--btn.no:hover {color:#7e6862;}
+
+/* --- idle compact ---*/
+.compactMode .idlebox--content {max-width:96vw; padding:20px 25px 10px 25px;}
+.compactMode .idlebox--bear {display:none;}
+.compactMode .idle--btngroup:before {content:""; display:block; width:180px; height:240px;
+margin:0 auto;    
+background-image:url("../images/idle-bear.png"); background-repeat:no-repeat;
+background-size:100% auto;
+}
+.compactMode .idle--btn {margin-bottom:10px;}
+.compactMode .idle--group h1 {font-size:40px;}
+.compactMode .idle--group p {font-size:24px; margin-bottom:20px;}
 
 /* --- show viewport size ---*/
 .detecion {position:fixed; right:10px; bottom:10px; pointer-events:none; z-index:10000; opacity:0.7;
