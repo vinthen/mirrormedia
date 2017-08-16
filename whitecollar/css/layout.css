@@ -418,7 +418,7 @@ background-image:url("../images/idle-bear.png"); background-repeat:no-repeat;
 background-size:100% auto;
 }
 .compactMode .idle--btn {margin-bottom:10px;}
-.compactMode .idle--group h1 {font-size:40px;}
+.compactMode .idle--group h1 {font-size:40px; margin-bottom:12px;}
 .compactMode .idle--group p {font-size:24px; margin-bottom:20px;}
 
 /* --- show viewport size ---*/
