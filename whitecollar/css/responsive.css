@@ -35,6 +35,9 @@
     .interview .pager {padding-bottom:12px;} 
     .fullwidth .pager {padding-bottom:12px;} 
 
+    /* --- 個別卡片設定 ---*/
+    .opening--btngroup p {font-size:20px; line-height:22px;}
+    .opening--btn {font-size:23px;}
 
 } 
 
@@ -50,8 +53,12 @@
 /* 高 > 寬，顯示 compact mode  */
 
 /* nav */
-.compactMode .nav {width:55px; left:auto; right:0; background-color:transparent;}
-.compactMode .nav--btn {background-image:url("../images/navbtn-compact.png");}
+.compactMode .nav {position:relative;
+background-color:transparent;
+}
+.compactMode .nav--btn {position:fixed; left:auto; right:9px;
+background-image:url("../images/navbtn-compact.png");
+}
 .nav--btn.share {top:58px;}
 .compactMode .nav--title {display:none;}
 
@@ -62,6 +69,7 @@
 .compactMode .cardwpr {padding:10px 5px;
 height:auto !important; 
 }  
+.compactMode .opening .cardwpr {padding-bottom:0;}
 
 .compactMode .full__size {display:none;}
 .compactMode .compact__size {display:block;} 
@@ -113,6 +121,22 @@ background-image:url("../images/card/quote-prot2.png");
 .compactMode .glaint--quote {width:100%; margin-bottom:10px;}
 .compactMode .glaint--quote:after {display:none;}
 .compactMode .glaint--btn {position:relative; top:auto; margin:0 auto;}
+
+/* opening */
+.compactMode .opening--btngroup {display:block; margin:0 auto;
+max-width:none; width:80%;
+}
+.compactMode .opening--btngroup.cht {margin-right:auto; margin-bottom:10px;}
+.compactMode .opening--btngroup p span {text-align:left; min-width:160px; display:inline-block;}
+
+@media only screen and (max-width: 500px) {
+    .compactMode .opening--btngroup.cht {margin-bottom:5px;}
+    .compactMode .opening--btngroup p span {font-size:18px;}
+    .compactMode .opening--btn {font-size:20px; line-height:38px; font-weight:500;}
+    .en.compactMode .opening--btn {font-size:18px;}
+    .compactMode .opening--btngroup p:before {background-size:50px auto; top:4px;}
+    
+} 
 
 
 @media only screen and (max-width: 375px) {
