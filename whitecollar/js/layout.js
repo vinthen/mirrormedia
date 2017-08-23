@@ -29,7 +29,7 @@ $card.filter(":odd").addClass("dark");
 }
 
 //only for firefox preview
-// $card.filter(":lt(4)").remove();
+// $card.filter(":lt(9)").remove();
 
 /*
 //init ScrollMagic
