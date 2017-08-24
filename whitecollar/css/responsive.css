@@ -145,3 +145,9 @@ max-width:none; width:80%;
     .glaint li {font-size:17px; line-height:23px;}
 
 } 
+
+@media only screen and (max-height: 700px) {
+    
+    .nav--title {display:none;}
+    
+    } 
