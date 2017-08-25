@@ -1,5 +1,4 @@
 @charset "utf-8";
-@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 /*--- reset ---*/
 body,dl,dt,dd,ul,ol,li,th,td,form,input,textarea,p {margin:0; padding:0;}
 img {display:block; border:0;}
@@ -41,9 +40,6 @@ background-position:right 0;
 margin-left:-10px; margin-top:-185px;
 background-image:url("../images/nav-title.png"); background-repeat:no-repeat;
 background-size:100% auto;
-}
-.en .nav--title {width:19px; height:471px; margin-top:-235px;
-background-image:url("../images/nav-title_en.png");
 }
 
 .nav--lang {width:100%; height:56px; display:block; position:absolute; left:0;
@@ -193,6 +189,7 @@ border-bottom:3px dotted #5a3a30;
 .interview--border h1 {margin-bottom:20px;
 font-size:26px; font-weight:500; color:#5a3a30; line-height:30px;
 } 
+
 .interview--border h1 .circle {display:inline-block; width:40px;
 text-align:center; margin-right:4px; line-height:40px;
 background-color:#9d413e; color:#fff;
@@ -287,13 +284,6 @@ background-size:90px auto; background-position:0 3px;
 
 /* --- compact card image ---*/
 .compact__size {display:none;}
-
-/* --- English ---*/
-.en p {text-align:left !important;}
-.en .desc p {font-size:16px; line-height:24px;}
-.en .credit h1 {font-size:16px;}
-.en .credit p {font-size:13px;}
-.en .credit p span {font-weight:bold;}
 
 
 /* --- glance template ---*/
@@ -417,13 +407,6 @@ border-radius:6px;
 }
 .idle--btn:hover {background-color:#76f0d2;}
 
-.en .idlebox--content {padding:30px 35px;}
-.en .idle--group {font-family:Tahoma; padding-left:12px;}
-.en .idle--group h1 {font-size:42px; margin-bottom:5px;}
-.en .idle--group p {font-size:22px; text-align:center !important;}
-.en .idle--btn {font-size:21px;}
-.en .idle--btn.yes {padding:10px 30px;}
-
 /* --- idle compact ---*/
 .compactMode .idlebox {width:100%;}
 .compactMode .idlebox--content {max-width:96vw; padding:20px 25px 10px 25px;}
@@ -450,7 +433,6 @@ vertical-align:middle;
 .opening--btngroup p {text-align:center; margin-bottom:10px;
 font-size:22px; line-height:22px; font-weight:500;
 }
-.en .opening--btngroup p {text-align:center !important; font-size:22px; line-height:22px;}
 .opening--btngroup p:before {content:""; display:inline-block; width:24px; height:28px;
 position:relative; top:5px; margin-right:8px;
 background-image:url("../images/page-arrow.png"); background-repeat:no-repeat;
@@ -467,6 +449,65 @@ box-shadow:inset 0 2px 4px rgba(255,255,255,0.15),0 0 0 3px #5a3a30;
 .eng .opening--btn {font-size:22px;}
 .opening--btn.full {border-radius:22px 0 0 22px;}
 .opening--btn.glance {border-radius:0 22px 22px 0;}
+
+/* --- English version ---*/
+body.en {font-family:'Noto Sans',sans-serif;}
+
+.en .opening--btngroup p {text-align:center !important; font-size:22px; line-height:22px; font-weight:bold;
+font-family:"微軟正黑體", "Microsoft JhengHei", sans-serif;
+}
+.en .cht .opening--btn {
+font-family:"微軟正黑體", "Microsoft JhengHei", sans-serif;
+}
+
+
+.en .nav--title {width:19px; height:471px; margin-top:-235px;
+background-image:url("../images/nav-title_en.png");
+}
+
+.en p {text-align:left !important;}
+.en .desc p {font-size:16px; line-height:24px;}
+.en .credit h1 {width:110px;
+font-size:16px; font-weight:700;
+background-position:center 3px;
+}
+.en .credit p {font-size:14px;}
+.en .credit p span {font-weight:bold;}
+
+/* --- English: interview ---*/
+.en .interview--brief {padding:40px 30px; width:380px;}
+.en .interview--quote {padding:22px 22px;}
+.en .interview--quote p {font-size:18px; line-height:26px; font-weight:700;
+font-family:'Noto Serif',serif;
+}
+.en .interview--border {width:calc(100% - 380px);}
+.en .interview--border h1 {font-family:'Noto Serif',serif; font-weight:700; font-size:32px;
+margin-bottom:15px;
+}
+.en .interview--border h2 {font-family:'Noto Serif',serif; font-weight:700;}
+.en .interview--intro li {font-family:'Noto Sans',sans-serif; font-weight:700; 
+font-size:18px; line-height:22px; margin-bottom:8px;
+}
+.en .interview--content p {font-family:'Noto Sans',sans-serif;}
+
+/* --- English: idle box ---*/
+.en .idlebox--content {padding:30px 35px;}
+.en .idle--group {font-family:Tahoma; padding-left:12px;}
+.en .idle--group h1 {font-size:42px; margin-bottom:5px;}
+.en .idle--group p {font-size:22px; text-align:center !important;}
+.en .idle--btn {font-size:21px;}
+.en .idle--btn.yes {padding:10px 30px;}
+
+/* --- English: glance ---*/
+.en .glaint h1 {font-family:'Noto Serif',serif; font-weight:700; font-size:34px;
+margin-bottom:10px; margin-left:0;
+}
+.en .glaint li {font-family:'Noto Sans',sans-serif; font-weight:700; 
+font-size:18px; line-height:22px; margin-bottom:6px;
+}
+.en .glaint--quote p {font-size:22px; line-height:30px; font-weight:700;
+font-family:'Noto Serif',serif;
+}
 
 
 /* --- show viewport size ---*/
