@@ -492,7 +492,7 @@ font-size:18px; line-height:22px; margin-bottom:8px;
 
 /* --- English: idle box ---*/
 .en .idlebox--content {padding:30px 35px;}
-.en .idle--group {font-family:Tahoma; padding-left:12px;}
+.en .idle--group {padding-left:12px;}
 .en .idle--group h1 {font-size:42px; margin-bottom:5px;}
 .en .idle--group p {font-size:22px; text-align:center !important;}
 .en .idle--btn {font-size:21px;}
