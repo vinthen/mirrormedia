@@ -71,6 +71,16 @@ background-attachment:fixed;
 padding:100px 15px; 
 }
 
+/*--- section 01 ---*/
+/* .sec01:before {content:""; display:block; width:180px; height:95px;
+position:fixed; right:44px; top:150px;
+background-image:url("../images/bg-cloud.png"); background-repeat:no-repeat;
+background-position:0 -542px;
+} */
+
+
+
+
 /*--- section 02 ---*/
 .sec02 .sectionwpr--center {padding-bottom:120px;}
 .sec02 .sectionwpr--center:before {content:""; width:180px; height:95px;
