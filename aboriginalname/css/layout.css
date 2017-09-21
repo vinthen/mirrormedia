@@ -50,14 +50,22 @@ background-repeat:repeat-x; background-size:auto 100%;
 .sec03 .band {background-image:url("../images/band03.png");}
 
 /*--- section ---*/
-.sectionwpr {position:relative; min-height:800px;}
-.sec01 {background-color:#f6f2ed;}
+.sectionwpr {position:relative;}
+.sec01 {background-color:#f6f2ed;
+background-image:url("../images/mountain01.png"); background-repeat:no-repeat;
+background-position:center bottom;
+background-attachment:fixed;
+}
 .sec02 {
 background-color:#17c2b3;
 background-image:url("../images/mountain02.png"); background-repeat:no-repeat;
 background-position:center calc(100% + 160px);
 }
-.sec03 {background-color:#e7e1d9;}
+.sec03 {background-color:#e7e1d9;
+background-image:url("../images/mountain03.png"); background-repeat:no-repeat;
+background-position:center bottom;
+background-attachment:fixed;
+}
 
 .sectionwpr--center {position:relative; max-width:1200px; margin:0 auto;
 padding:100px 15px; 
