@@ -215,7 +215,7 @@ background-color:#fcfbfb; border-radius:20px;
 .quiz--option a:hover i {background-color:#fff;}
 
 .quiz--option a.correct {background-color:#17c2b3; color:#fff;}
-.quiz--option a.incorrect {background-color:#d65b4b; color:#fff;}
+.quiz--option a.incorrect {background-color:#e25e4c; color:#fff;}
 
 .quiz--option a.correct i,.quiz--option a.incorrect i {
 text-indent:-100%;
@@ -237,7 +237,7 @@ box-shadow:0 1px 2px rgba(0,0,0,0.02);
 }
 .quiz--answer.correct:before {
 background-position:23px 12px;    
-background-color:#fdf4e6;
+background-color:#fdf4e6; background-color:#eee7dd;
 }
 .quiz--answer.incorrect:before {
 background-position:-71px 12px;    
@@ -272,27 +272,32 @@ border-width:30px 14px 30px 0; border-color:transparent #dcd8d3 transparent tran
 
 .quiz--scrollwpr p {position:relative;}
 .quiz--scrollwpr strong {font-weight:normal;
-background-color:#f9e27e; border-bottom:2px solid #d4c898;
+background-color:#f9db78; border-bottom:2px solid #d7c18c;
 }
 
 .quiz--descfooter {overflow:hidden;}
 .quiz--nextbtn {display:block; height:46px; float:right; clear:right; padding:0 40px;
 color:#fff; font-weight:500; font-size:20px; line-height:46px; text-align:center;
-background-color:#fa901a; border-radius:24px;
+background-color:#f7700e; border-radius:24px;
 cursor:pointer;
 }
-.quiz--nextbtn.final {background-color:#292421;}
+.quiz--nextbtn:hover {background-color:#f45707;}
+/* .quiz--nextbtn.final {background-color:#292421;} */
 
 /* --- quiz: result ---*/
-.quiz--q,.quiz--a {height:100%;}
+.quiz--result .quiz--q,.quiz--result .quiz--a {height:100%;}
 .quiz--result .quiz--pager {display:none;}
 
-/* .quiz--result .quiz--q {background-color:#fff;}
-.quiz--result .quiz--q:after {border-color:transparent transparent transparent #fff;} */
-.quiz--result .quiz--q:before {display:none;}
+.quiz--result .quiz--q:before {opacity:0.5;}
 .quiz--result .quiz--q:after {display:none;}
 
-/* .quiz--result .quiz--a {background-color:#fff;} */
+.quiz--badge {width:95%; max-width:440px; margin:50px auto 20px auto;}
+.quiz--badge img {width:100%;}
+.quiz--ribbon {width:95%; max-width:480px; margin:0 auto;}
+.quiz--ribbon img {width:100%;}
+
+
+
 
 
 /* --- content ---*/
