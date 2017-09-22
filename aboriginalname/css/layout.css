@@ -324,7 +324,7 @@ background-size:19px auto; background-position:7px 9px;
 font-size:16px; cursor:pointer;
 }
 .quiz--resultbtn a:before {content:""; display:block; position:absolute; top:0; left:50%;
-background-color:#006480;
+background-color:#005f82;
 background-image:url("../images/icon-result.png"); background-repeat:no-repeat;
 background-size:38px auto;
 }
