@@ -1,9 +1,183 @@
 @charset "utf-8";
 
-@media only screen and (max-width : 980px) {
-/* Styles */
+@media only screen and (max-width : 1100px) {
+
+    .quiz--scrollwpr .contentwpr {padding-left:55px; padding-right:45px;}
+
 }
 
-@media only screen and (min-width : 1824px) {
-/* Styles */
+@media only screen and (max-width : 1000px) {
+    .band {height:140px;}
+    .sec02 .intro:before,.sec02 .intro:after {display:none;}
+
+    .quiz--resultbtn .share,.quiz--resultbtn .chart {margin-right:30px;}
+}
+
+@media only screen and (max-width : 840px) {
+    .quiz--resultbtn .share,.quiz--resultbtn .chart {margin-right:20px;}
+}
+
+@media only screen and (max-width : 780px) {
+
+    .chartwpr {padding-top:30px; margin-bottom:40px;}
+    .chartwpr .left,.chartwpr .right {float:none; width:100%;}
+    .chartwpr .left {margin-bottom:40px; padding-bottom:40px;
+        background-image:url("../images/dotted02.png"); background-repeat:repeat-x;
+        background-size:auto 3px; background-position:bottom center;
+    }
+    .chartwpr img {width:100%;}
+    .chartwpr img.regular {display:none;}
+    .chartwpr img.compact {display:block;}
+
+    .quiz--q {width:46%;}
+    .quiz--a {width:54%;}
+    .quiz--scrollwpr .contentwpr {padding:50px 40px 50px 50px;
+        font-size:17px; line-height:29px;
+    }
+    .quiz--option a {font-size:18px;}
+    .quiz--name {letter-spacing:4px;}
+    .quiz--portrait {max-width:270px;}
+
+    .quiz--resultbtn a {padding-top:64px; line-height:28px;}
+    .quiz--resultbtn .share {margin-right:40px; margin-bottom:20px;}
+    .quiz--resultbtn .chart {margin-right:0; margin-bottom:20px;}
+    .quiz--resultbtn .readmore {clear:both; padding:52px 6px 0 6px;}
+    .quiz--resultbtn .readmore:before {top:0;}
+    .quiz--scrollwpr h3 {letter-spacing:0; font-size:19px;}
+
+    .extended--tab {width:160px;}
+    .extended--content {width:calc(100% - 160px);}
+    .extended--content .contentwpr {padding:30px 30px 10px 30px;}
+
+}
+
+@media only screen and (max-width : 700px) {
+
+    .sectionwpr--center {padding:60px 15px;}
+
+    .section--chapter {min-width:60%; height:46px;
+        font-size:15px; letter-spacing:6px; line-height:46px;
+    }
+    .section--title {width:100%; padding:0; padding-left:4px; height:60px;
+        font-size:24px; letter-spacing:4px; line-height:60px;
+        box-sizing:border-box;
+    }
+
+    .sec02 .intro {padding:0;}
+    
+    .quiz--content {height:auto;}
+
+    .quiz--q,.quiz--a {float:none; width:100%;}
+    .quiz--q {height:266px;}
+    .quiz--portrait {max-width:200px;}
+    .quiz--portrait img {margin-bottom:10px;}
+    .quiz--name {position:relative; top:auto; font-size:24px;}
+    .quiz--q:before,.quiz--q:after {display:none;}
+    
+    .quiz--a {height:auto;}
+    .quiz--scrollwpr .contentwpr {padding:15px 20px 15px 20px;}
+    .quiz--scrollwpr hr {padding-top:15px; margin-bottom:10px;}
+    .quiz--option li {margin-bottom:5px;}
+    .quiz--option a {padding:8px 10px; margin-right:-10px;}
+    .quiz--option i {margin-right:10px;}
+
+    .quiz--pager {height:56px;}
+    .quiz--pager .text {display:none;}
+    .quiz--pager .circle {margin-right:20px;
+    width:28px; height:28px; line-height:28px; font-size:17px;
+    color:#6a3e2c; border-color:#6a3e2c;
+    }
+    .quiz--pager .circle.current {background-color:#6a3e2c;}
+    .quiz--pager .circle:after {display:none;}
+
+    .quiz--answer {margin-bottom:15px; padding-top:10px;}
+    .quiz--answer .state {font-size:24px;}
+    .quiz--answer p {font-size:18px;}
+
+    .quiz--badge {margin-top:15px; margin-bottom:15px; width:90%;}
+
+    .quiz--resultbtn {margin-bottom:15px;}
+    .quiz--resultbtn .share,.quiz--resultbtn .chart {margin-right:40px; margin-bottom:0;}
+    .quiz--resultbtn .readmore {clear:none; padding:66px 0 0 0;}
+    .quiz--resultbtn .readmore:before {top:6px;}
+
+    .quiz--scrollwpr h3 {margin-top:15px;}
+
+    h4.extra {text-align:center; line-height:30px;}
+    h4.extra:before {display:none;}
+
+    .extended--wpr {height:auto !important;}
+    .extended--tab {width:100%; float:none; padding:2px; text-align:center;
+    border-bottom:5px solid #241d18;
+    }
+    .extended--tab:before {display:none;}
+    .extended--content {width:100%; float:none; height:auto;}
+
+    .tabs:after {content:""; display:table; clear:both;}
+    .extended--tab li {float:left; margin:2px;
+        line-height:33px;
+    }
+    .extended--tab a {display:inline-block; padding:0 15px; height:33px;
+        background-color:#3b3633; border-radius:2px;
+    }
+    .extended--tab li.current a:after {display:none;}
+    .extended--tab li.current a {background-color:#68625d;}
+
+    .extended--content .contentwpr {padding:30px 15px 10px 15px; text-align:center;}
+
+}
+
+@media only screen and (max-width : 600px) {
+    
+    .credit .regular {display:none;}
+    .credit .compact {display:block;}
+    
+}
+
+@media only screen and (max-width : 500px) {
+
+    .quiz--resultbtn .share,.quiz--resultbtn .chart {margin-right:20px;}
+
+    .lbContent {padding:0 25px;}
+
+}
+
+@media only screen and (max-width : 450px) {
+
+    .quiz--resultbtn .share {margin-right:60px; margin-bottom:20px;}
+    .quiz--resultbtn .chart {margin-right:0; margin-bottom:20px;}
+    .quiz--resultbtn .readmore {clear:both; padding:52px 16px 0 16px;}
+    .quiz--resultbtn .readmore:before {top:0; padding-right:0; padding-left:20px;
+        text-align:center; background-position:29px -140px;
+    }
+    
+}
+
+@media only screen and (max-width : 400px) {
+    
+    .quiz {padding:6px; margin-left:-10px; margin-right:-10px;}
+    .quiz:before,.quiz:after {width:9px; height:9px;}
+    .quiz--content:before,.quiz--content:after {width:9px; height:9px; bottom:-11px;}
+    .quiz--content:before {left:-11px;}
+    .quiz--content:after {right:-11px;}
+
+    .quiz--scrollwpr .contentwpr {padding:15px;}
+
+    .extended {padding:6px; margin-left:-10px; margin-right:-10px;}
+    .extended:before,.extended:after {width:9px; height:9px;}
+    .extended--wpr:before,.extended--wpr:after {width:9px; height:9px; bottom:-11px;}
+    .extended--wpr:before {left:-11px;}
+    .extended--wpr:after {right:-11px;}
+
+    .extended--content .contentwpr {padding-top:15px; padding-bottom:0;}
+    .extended--content h4 {font-size:24px;}
+
+    .lbContent h4 {font-size:25px; text-align:left;}
+
+}
+
+@media only screen and (max-width : 350px) {
+
+    .section--chapter {letter-spacing:3px;}
+    .section--title {letter-spacing:1px; font-size:22px;}
 }
