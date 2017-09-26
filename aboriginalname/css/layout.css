@@ -29,16 +29,84 @@ font-weight:100,300,400,500,700,900
 /*--- nav ---*/
 .nav {position:fixed; left:0; top:0; z-index:9999;}
 .nav--btn {display:block; width:40px; height:40px;
-position:absolute; left:6px;    
+position:absolute; left:10px;    
 background-image:url("../images/navbtn.png"); background-repeat:no-repeat;
 background-size:auto 40px;
 }
-.nav--btn.mirrormedia {top:6px;
+.nav--btn.mirrormedia {top:10px;
 background-position:0 0;
 }
-.nav--btn.share {top:57px;
+.nav--btn.share {top:60px;
 background-position:right 0;
 }
+
+/*--- nav chapter ---*/
+.navc {position:relative; z-index:9999;}
+.navc--trigger {position:fixed; right:20px; top:20px; cursor:pointer;
+width:45px; height:45px;    
+border:1px solid #1e1916; 
+}
+.navc--trigger:after {content:""; display:table; clear:both;}
+.navc--trigger:hover {background-color:#fff;}
+.navc .brick {width:22px; height:22px; float:left;
+text-align:center; font-size:15px; line-height:18px; color:#1e1916; font-weight:500;
+}
+.navc .brick.current {background-color:#1e1916; color:#fff;}
+.navc .b1 {border-right:1px solid #1e1916; border-bottom:1px solid #1e1916;}
+.navc .b2 {border-bottom:1px solid #1e1916;}
+.navc .b3 {border-right:1px solid #1e1916;}
+
+.navc .title {position:fixed; top:76px; right:26px;
+writing-mode:vertical-rl; font-size:20px; font-weight:500; letter-spacing:3px;
+}
+
+.reverse .navc--trigger {border-color:#fff;}
+.reverse .navc--trigger:hover {background-color:#31261e;}
+.reverse.navc .brick  {color:#fff;}
+.reverse.navc .brick.current {background-color:#fff; color:#31261e;}
+.reverse.navc .b1 {border-right:1px solid #fff; border-bottom:1px solid #fff;}
+.reverse.navc .b2 {border-bottom:1px solid #fff;}
+.reverse.navc .b3 {border-right:1px solid #fff;}
+.reverse.navc .title {color:#fff;}
+
+.navc--panel {width:250px; height:100%; position:fixed; top:0; right:-300px;
+background-color:#fdfcfb; box-shadow:0 0 10px rgba(0,0,0,0.2);
+transition:250ms; transition-property:right;
+pointer-events:none;
+}
+.navc--panel.show {right:0; pointer-events:auto;}
+.navc--panel .container {height:calc(100% - 40px); position:relative;}
+.navc--btn {height:25%; padding:20px 40px; cursor:pointer; position:relative; display:block;
+line-height:30px;
+border-bottom:1px solid #dddbda;
+box-sizing:border-box;
+}
+.navc--btn:hover {background-color:#f4f3f1;}
+.navc--btn.current {
+color:#fff; font-size:20px;
+background-color:#403b38;
+}
+
+.navc--btn .text {width:100%; height:100%; margin-bottom:0;
+display:flex; align-items:center; justify-content:center;
+}
+
+.navc--btn .num {position:absolute; left:8px; top:10px;
+font-size:16px; line-height:100%; font-weight:500; color:#acacab;
+}
+.navc--btn.current .num {color:#fff;}
+
+.navc--close {display:block; height:40px; cursor:pointer; position:relative;
+background-color:#e5e4e3; border-bottom:1px solid #dddbda;
+box-sizing:border-box;
+background-image:url("../images/icon-navcarrow.png"); background-repeat:no-repeat;
+background-position:center center; background-size:auto 16px;
+}
+
+.navc--overlay {width:100%; height:100%; position:fixed; left:0; top:0;
+display:none;
+}
+.navc--panel.show .navc--overlay {display:block;}
 
 /*--- opening ---*/
 .opening {height:100vh;
@@ -121,7 +189,7 @@ cursor:pointer;
 .annotation--mark:hover {border-bottom:2px dotted #8e4028;}
 
 /*--- section 01 ---*/
-.sec01 .sectionwpr--center {max-width:960px;}
+.sec01 .sectionwpr--center {max-width:860px;}
 
 .chartwpr {margin-bottom:50px; padding-top:40px;}
 .chartwpr:after {content:""; display:table; clear:both;}
@@ -138,13 +206,13 @@ color:#fff; text-align:center; font-weight:500;
 background-color:#8e4028; border-radius:50%;
 }
 
-.chart01 img {max-width:310px;}
-.chart02 img {max-width:439px;}
-.chart02 img.compact {max-width:439px;}
-.chart03 img {max-width:559px;}
-.chart03 img.compact {max-width:494px;}
-.chart04 img {max-width:856px;}
-.chart04 img.compact {max-width:320px;}
+.chart01 img {width:310px;}
+.chart02 img {width:439px;}
+.chart02 img.compact {width:439px;}
+.chart03 img {width:559px;}
+.chart03 img.compact {width:494px;}
+.chart04 img {width:856px;}
+.chart04 img.compact {width:320px;}
 
 /*--- section 02 ---*/
 .sec02 .sectionwpr--center {padding-bottom:120px;}
@@ -160,7 +228,7 @@ background-image:url("../images/hr-triangle.png"); background-repeat:no-repeat;
 background-size:auto 17px; background-position:center top;
 }
 
-.sec02 .intro {max-width:960px; margin:0 auto 50px auto; position:relative;
+.sec02 .intro {max-width:860px; margin:0 auto 50px auto; position:relative;
 font-size:17px; line-height:29px; padding:0 15px;
 }
 .sec02 .intro p {position:relative;}
@@ -399,31 +467,44 @@ box-sizing:border-box;
 
 
 /*--- section 03 ---*/
-.sec03 .sectionwpr--center {padding-bottom:50px;}
+.sec03 .sectionwpr--center {padding-bottom:50px; max-width:860px;}
 
-hr.chapter {height:0; display:block; padding-top:45px; margin-bottom:45px;
+hr.chapter {height:0; display:block; padding-top:75px; margin-bottom:50px;
 border:none;
 background-image:url("../images/dotted02.png"); background-repeat:repeat-x;
 background-size:auto 3px; background-position:center center;
 }
-hr.appendix {margin-bottom:15px;}
+hr.appendix {padding-top:45px; margin-bottom:15px;}
 
 .extended--foter {clear:both;}
 
-h4.extra {font-size:21px; margin-bottom:15px; text-align:left;}
-h4.extra:before {content: "\276F"; margin-right:12PX;}
+.extra {font-size:21px; margin-bottom:15px; text-align:left;}
+.extra:before {content: "\276F"; margin-right:12PX;}
 
-h4.extra a {color:#292421; padding:0 12px; font-weight:500;
+.extra a {color:#292421; padding:0 12px; font-weight:500;
 background-color:#dcd8d3;
 border-radius:4px; cursor:pointer;
 }
-h4.extra a:hover {background-color:#fff;}
+.extra a:hover {background-color:#fff;}
 
-.extra .pdf {padding:0 5px; display:inline-block; height:24px;
-position:relative; left:5px; top:-4px;
-font-size:12px; color:#fff; line-height:24px;
+.extra .pdf {padding:0 5px; display:inline-block; height:21px;
+position:relative; left:5px; top:-2px;
+font-size:12px; color:#fff; line-height:21px;
 background-color:#b40202; border-radius:4px;
 }
+
+h5.extra {font-size:18px; margin-bottom:10px;}
+
+
+ol.section {margin-bottom:30px;
+text-align:left;
+}
+ol.section li {list-style:disc; margin-bottom:15px; margin-left:17px;}
+ol.section span.list {font-weight:600;}
+
+.sec04.spacer {height:50px;}
+
+
 
 /*--- extended reading ---*/
 .extended {padding:10px; position:relative; margin-bottom:30px;
@@ -502,12 +583,16 @@ border-bottom:7px solid #e2b9a4;
 }
 
 /*--- credit ---*/
-.credit {font-size:15px; line-height:25px;}
-hr.credit {margin-bottom:0;}
+.credit {font-size:14px; line-height:23px;}
+hr.credit {padding-top:45px; margin-bottom:0;}
 
 .credit p {margin-bottom:5px; text-align:center;}
 .credit .slash {margin:0 6px;}
 .credit .compact {display:none;}
+.credit .compact li {margin-bottom:2px;}
+
+.credit .publish {color:#7c7b79;}
+
 
 /*--- lightbox ---*/
 html.stop-scroll {overflow:hidden;}

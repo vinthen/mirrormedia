@@ -35,25 +35,41 @@ $(".lbOverlay").click(function(){
     lbClose();
 });
 
-
+//open lightbox
 function lbOpen(target){
     var lb_id = target.attr("data-lb");
     $("#" + lb_id ).addClass("active");
     $("html").addClass("stop-scroll");
 }
 
+//close lightbox
 function lbClose(){
     $(".lightbox").removeClass("active");
     $("html").removeClass("stop-scroll");
 }
 
+//章節選單
+let $navcPanel = $(".navc--panel");
+$(".navc--trigger").click(function(){
+    $navcPanel.addClass("show");
+});
+
+$(".navc--close").click(function(){
+    $navcPanel.removeClass("show");
+});
+
+$(".navc--overlay").click(function(){
+    $navcPanel.removeClass("show");
+});
+
+
 
 
 //測試用選單，發佈前請移除
-$("body").append("<div id='testnav'></div>");
-$("#testnav").load("test.html",function(){
-    console.log("test nav loaded");
-});
+// $("body").append("<div id='testnav'></div>");
+// $("#testnav").load("test.html",function(){
+//     console.log("test nav loaded");
+// });
 
 
 

@@ -11,6 +11,10 @@
     .sec02 .intro:before,.sec02 .intro:after {display:none;}
 
     .quiz--resultbtn .share,.quiz--resultbtn .chart {margin-right:30px;}
+
+    .navc .title {display:none;}
+    .navc--trigger {right:6px; background-color:#f6f2ed;}
+    .reverse .navc--trigger {background-color:#292421;}
 }
 
 @media only screen and (max-width : 840px) {
@@ -25,7 +29,7 @@
         background-image:url("../images/dotted02.png"); background-repeat:repeat-x;
         background-size:auto 3px; background-position:bottom center;
     }
-    .chartwpr img {width:100%;}
+    /* .chartwpr img {width:100%;} */
     .chartwpr img.regular {display:none;}
     .chartwpr img.compact {display:block;}
 
@@ -124,6 +128,8 @@
     .extended--tab li.current a {background-color:#68625d;}
 
     .extended--content .contentwpr {padding:30px 15px 10px 15px; text-align:center;}
+
+    .extra.reference {display:none;}
 
 }
 
