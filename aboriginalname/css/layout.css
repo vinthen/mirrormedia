@@ -189,7 +189,7 @@ cursor:pointer;
 .annotation--mark:hover {border-bottom:2px dotted #8e4028;}
 
 /*--- section 01 ---*/
-.sec01 .sectionwpr--center {max-width:860px;}
+.sec01 .sectionwpr--center {max-width:800px;}
 
 .chartwpr {margin-bottom:50px; padding-top:40px;}
 .chartwpr:after {content:""; display:table; clear:both;}
@@ -228,7 +228,7 @@ background-image:url("../images/hr-triangle.png"); background-repeat:no-repeat;
 background-size:auto 17px; background-position:center top;
 }
 
-.sec02 .intro {max-width:860px; margin:0 auto 50px auto; position:relative;
+.sec02 .intro {max-width:800px; margin:0 auto 50px auto; position:relative;
 font-size:17px; line-height:29px; padding:0 15px;
 }
 .sec02 .intro p {position:relative;}
@@ -292,7 +292,7 @@ border-color:transparent transparent transparent #eeeae6;
 position:relative; top:50%;
 transform: perspective(1px) translateY(-50%);
 }
-.quiz--portrait img {width:100%; border-radius:50%;}
+.quiz--portrait img {width:100%;}
 
 .quiz--name {position:absolute; top:-67px; width:100%;
 color:#31261e; font-size:26px; font-weight:500;
@@ -467,7 +467,7 @@ box-sizing:border-box;
 
 
 /*--- section 03 ---*/
-.sec03 .sectionwpr--center {padding-bottom:50px; max-width:860px;}
+.sec03 .sectionwpr--center {padding-bottom:50px; max-width:800px;}
 
 hr.chapter {height:0; display:block; padding-top:75px; margin-bottom:50px;
 border:none;
