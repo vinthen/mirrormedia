@@ -72,11 +72,17 @@
     .quiz--content {height:auto;}
 
     .quiz--q,.quiz--a {float:none; width:100%;}
-    .quiz--q {height:266px;}
-    .quiz--portrait {max-width:200px;}
+    .quiz--q {height:auto; padding-top:15px;}
+    .quiz--portrait {max-width:200px; top:auto; transform:translateY(0);}
     .quiz--portrait img {margin-bottom:10px;}
-    .quiz--name {position:relative; top:auto; font-size:24px;}
+    .quiz--name {position:relative; top:auto; font-size:24px; margin-bottom:15px;}
     .quiz--q:before,.quiz--q:after {display:none;}
+
+    .portrait--credit {position:relative; bottom:auto; left:auto; 
+        padding:8px 0; font-size:15px;
+        background-color:#f7f4f2; border-top:1px solid #e5e1dd; border-bottom:1px solid #d6d1cc;
+    }
+
     
     .quiz--a {height:auto;}
     .quiz--scrollwpr .contentwpr {padding:15px 20px 15px 20px;}
@@ -129,7 +135,7 @@
 
     .extended--content .contentwpr {padding:30px 15px 10px 15px; text-align:center;}
 
-    .extra.reference {display:none;}
+    .extra.reference {display:none;}   
 
 }
 
@@ -143,8 +149,8 @@
 @media only screen and (max-width : 500px) {
 
     .quiz--resultbtn .share,.quiz--resultbtn .chart {margin-right:20px;}
-
     .lbContent {padding:0 25px;}
+    .band {height:120px;}
 
 }
 
@@ -179,6 +185,8 @@
     .extended--content h4 {font-size:24px;}
 
     .lbContent h4 {font-size:25px; text-align:left;}
+
+    .band {height:110px;}
 
 }
 

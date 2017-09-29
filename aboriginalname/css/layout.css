@@ -211,7 +211,7 @@ background-color:#8e4028; border-radius:50%;
 .chart02 img.compact {width:439px;}
 .chart03 img {width:559px;}
 .chart03 img.compact {width:494px;}
-.chart04 img {width:856px;}
+.chart04 img {width:738px;}
 .chart04 img.compact {width:320px;}
 
 /*--- section 02 ---*/
@@ -299,6 +299,10 @@ color:#31261e; font-size:26px; font-weight:500;
 letter-spacing:13px; line-height:100%; text-align:center;
 }
 
+.portrait--credit {position:absolute; bottom:15px; left:0; width:100%;
+text-align:center; font-size:16px; line-height:100%; color:#7e7c7b;
+}
+
 /* --- quiz: pager ---*/
 .quiz--pagervwpr {position:relative; top:50%;
 transform: perspective(1px) translateY(-50%);
@@ -345,7 +349,7 @@ background-size:auto 3px; background-position:center center;
 .quiz--option {text-align:left; margin-left:-10px;}
 .quiz--option li {margin-bottom:20px;}
 .quiz--option a {display:block; cursor:pointer; padding:10px;
-font-family:Georgia,serif; color:#31261e; font-size:20px;
+font-family:Georgia,"Noto Sans TC",serif; color:#31261e; font-size:20px;
 border-radius:3px; overflow:hidden;
 }
 .quiz--option a:hover {background-color:#e8e5e1;}
@@ -563,7 +567,7 @@ background-image:url("../images/bg-cloud-extended.png"); background-repeat:no-re
 background-position:calc(100% - 28px) 200px;
 }
 
-.extended--content .contentwpr {padding:30px 50px 10px 50px; position:relative;
+.extended--content .contentwpr {padding:30px 35px 10px 35px; position:relative;
 font-size:16px; line-height:30px; text-align:left;
 }
 
@@ -645,7 +649,7 @@ width:32px; height:32px; margin-left:-32px;
 position:relative; top:2px;
 }
 
-#quizChart h4 {margin-bottom:60px;}
+#quizChart h4 {margin-bottom:60px; text-align:center;}
 .resultChartSample img {max-width:100%;}
 
 
