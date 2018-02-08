@@ -1,12 +1,12 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
-let $selector = $(".selector");
+  let $marker = $(".marker");
 
-$(".menuTrigger").click(function(){
+  $(".menuTrigger").click(function () {
 
-  $selector.toggleClass("active");
+    $marker.toggleClass("active");
 
-});
+  });
 
 
 
