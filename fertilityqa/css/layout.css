@@ -137,6 +137,13 @@ cursor:pointer;
 
 .desc .choices {padding:20px 0; display:none;}
 
+/* continue */
+.continue {width:141px; height:196px; margin:-20px auto -76px auto;
+cursor:pointer;    
+background-image:url("../images/icon-continue.png");
+background-repeat:no-repeat; background-size:100% auto;
+}
+
 /* article link */
 /* .article {position:relative; margin-bottom:40px; padding-top:10px;
 font-size:0; line-height:0; 
@@ -241,6 +248,9 @@ font-size:50px; font-weight:bold; color:#bb8a01; text-align:center;
 font-size:30px; font-weight:bold;
 }
 .articlewpr h3 {font-size:20px; margin-bottom:10px;}
+
+.articlewpr ul {margin-left:18px;}
+.articlewpr ul li {list-style:disc;}
 
 /* article: chart */
 .chart-container {flex:1;}
