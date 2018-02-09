@@ -232,7 +232,7 @@ background-color:#f8f3d6;
 }
 
 .articlewpr section {max-width:1400px; margin:0 auto;  
-box-sizing:border-box;
+box-sizing:border-box; padding:25px 0;
 display:flex;
 background-color:#f8f3d6;
 }
